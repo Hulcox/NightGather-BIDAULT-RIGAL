@@ -10,18 +10,20 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserDto {
+
     private Long id;
     private String email;
+    private String password;
     private String name;
     private String firstName;
+    private String userName;
     private int age;
-
     private String bio;
-    private double rating;
+    private List<Long> rates;
     private String profilePicture;
-
     private String region;
     private String city;
-
-    List<EventDto> events;
+    private List<Long> events;
+    private List<Long> organizedEvents;
 }
+

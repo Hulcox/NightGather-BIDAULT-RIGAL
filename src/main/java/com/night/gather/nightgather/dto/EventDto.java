@@ -4,11 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class EventDto {
     private Long id;
-
-    private UserDto orgenizer;
+    private String address;
+    private List<Long> participants;
+    private Integer numberOfPlaces;
+    private double price;
+    private LocalDateTime datetime;
+    private Long typeId;
+    private Long organizerId;
 }

@@ -25,11 +25,5 @@ public class Type {
 
     @OneToMany(mappedBy = "type", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
     private List<Event> events;
-
-    public enum TypeEvent {
-        VIDEOGAME,
-        BOARDGAME,
-        PARTY,
-    }
 }
 
