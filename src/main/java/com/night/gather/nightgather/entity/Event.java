@@ -40,11 +40,11 @@ public class Event {
     @Column(name = "datetime", nullable = false)
     private LocalDateTime datetime;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "type_id", referencedColumnName = "id_type")
     private Type type;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "organizer_id", referencedColumnName = "id_user")
     private User organizer;
 }

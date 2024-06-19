@@ -23,11 +23,11 @@ public class User {
     private String password;
 
     @Column(name = "lastname",nullable = false, length = 50)
-    private String lastName;
+    private String lastname;
     @Column(name = "firstname",nullable = false, length = 50)
-    private String firstName;
+    private String firstname;
     @Column(name = "username",nullable = false, length = 50)
-    private String userName;
+    private String username;
     @Column(name = "age",nullable = false)
     private int age;
 

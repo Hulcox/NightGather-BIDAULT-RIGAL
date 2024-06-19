@@ -6,9 +6,9 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", uses = {RateMapper.class})
+@Mapper(componentModel = "spring")
 public interface UserMapper {
-    UserDto tatoDto(User user);
+    UserDto toDto(User user);
     User toEntity(UserDto userDto);
     List<UserDto> toDtos(List<User> users);
     List<User> toEntities(List<UserDto> usersDto);

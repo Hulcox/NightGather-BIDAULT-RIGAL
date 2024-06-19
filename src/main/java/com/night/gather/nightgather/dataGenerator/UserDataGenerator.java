@@ -16,9 +16,9 @@ public class UserDataGenerator {
             User user = new User();
             user.setEmail(faker.internet().emailAddress());
             user.setPassword(faker.internet().password().substring(0,4));
-            user.setLastName(faker.name().lastName());
-            user.setFirstName(faker.name().firstName());
-            user.setUserName(faker.name().username());
+            user.setLastname(faker.name().lastName());
+            user.setFirstname(faker.name().firstName());
+            user.setUsername(faker.name().username());
             user.setRegion(faker.address().state());
             user.setAddress(faker.address().streetAddress());
             user.setCity(faker.address().city());

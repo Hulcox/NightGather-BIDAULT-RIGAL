@@ -1,6 +1,5 @@
 package com.night.gather.nightgather.dto;
 
-import com.night.gather.nightgather.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,10 +13,10 @@ import java.util.List;
 public class EventDto {
     private Long id;
     private String address;
-    private List<UserDto> participants;
+//    private List<UserDto> participants;
     private Integer numberOfPlaces;
     private double price;
     private LocalDateTime datetime;
-    private TypeDto typeId;
-    private UserDto organizerId;
+    private TypeDto type;
+    private UserDto organizer;
 }

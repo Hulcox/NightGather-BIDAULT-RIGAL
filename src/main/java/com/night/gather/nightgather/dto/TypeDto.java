@@ -14,5 +14,5 @@ public class TypeDto {
 
     private Long id;
     private TypeEvent type;
-    private List<EventDto> events;
+//    private List<EventDto> events;
 }
