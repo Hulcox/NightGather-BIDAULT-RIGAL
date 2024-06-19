@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.BatchSize;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,7 +16,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
+    @Column(name = "id_user")
     private Long id;
 
     @Column(name = "email", nullable = false, length = 50)
@@ -23,19 +24,21 @@ public class User {
     @Column(name = "password",nullable = false, length = 20)
     private String password;
 
-    @Column(name = "name",nullable = false, length = 50)
+    @Column(name = "lastname",nullable = false, length = 50)
     private String name;
-    @Column(name = "first_name",nullable = false, length = 50)
+    @Column(name = "firstname",nullable = false, length = 50)
     private String firstName;
-    @Column(name = "user_name",nullable = false, length = 20)
+    @Column(name = "username",nullable = false, length = 20)
     private String userName;
     @Column(name = "age",nullable = false)
     private int age;
 
     @Column(name = "bio")
     private String bio;
-    @Column(name = "rating",nullable = false)
-    private double rating = 0.0;
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    List<Rate> rates;
+
     @Column(name = "profile_picture")
     private String profilePicture;
 
@@ -44,6 +47,14 @@ public class User {
     @Column(name = "city",nullable = false, length = 100)
     private String city;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    List<Event> events;
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "participants_events",
+            joinColumns = @JoinColumn(name = "event_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<Event> events;
+
+    @OneToMany(mappedBy = "organizer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    List<Event> organizedEvents;
 }

@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+import java.util.List;
+
 @Entity
 @Table(name = "events")
 @Data
@@ -14,10 +17,34 @@ public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "event_id")
+    @Column(name = "id_event")
     private Long id;
 
-    @ManyToOne()
-    @JoinColumn(name = "organizer_id", referencedColumnName = "user_id")
-    private User user;
+    @Column(name="address", nullable = false, length = 150)
+    private String address;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "participants_events",
+            joinColumns = @JoinColumn(name = "event_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<User> participants;
+
+    @Column(name = "number_of_places", nullable = false)
+    private Integer numberOfPlaces;
+
+    @Column(name = "price", nullable = false)
+    private double price;
+
+    @Column(name = "datetime", nullable = false)
+    private LocalDateTime datetime;
+
+    @ManyToOne
+    @JoinColumn(name = "type_id", referencedColumnName = "id_type")
+    private Type type;
+
+    @ManyToOne
+    @JoinColumn(name = "organizer_id", referencedColumnName = "id_user")
+    private User organizer;
 }
