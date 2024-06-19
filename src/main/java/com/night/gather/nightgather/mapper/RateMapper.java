@@ -6,7 +6,7 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", uses = UserMapper.class)
+@Mapper(componentModel = "spring")
 public interface RateMapper {
     RateDto toDto(Rate rate);
     Rate toEntity(RateDto rateDto);

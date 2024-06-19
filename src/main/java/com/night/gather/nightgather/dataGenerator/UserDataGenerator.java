@@ -23,6 +23,7 @@ public class UserDataGenerator {
             user.setAddress(faker.address().streetAddress());
             user.setCity(faker.address().city());
             user.setAge(faker.number().numberBetween(18, 55));
+            user.setBio(faker.lorem().sentence());
             users.add(user);
         }
         return users;
