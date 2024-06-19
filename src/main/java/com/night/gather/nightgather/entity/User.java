@@ -2,9 +2,7 @@ package com.night.gather.nightgather.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.BatchSize;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -25,10 +23,10 @@ public class User {
     private String password;
 
     @Column(name = "lastname",nullable = false, length = 50)
-    private String name;
+    private String lastName;
     @Column(name = "firstname",nullable = false, length = 50)
     private String firstName;
-    @Column(name = "username",nullable = false, length = 20)
+    @Column(name = "username",nullable = false, length = 50)
     private String userName;
     @Column(name = "age",nullable = false)
     private int age;
@@ -46,6 +44,8 @@ public class User {
     private String region;
     @Column(name = "city",nullable = false, length = 100)
     private String city;
+    @Column(name = "address",nullable = false, length = 100)
+    private String address;
 
     @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
