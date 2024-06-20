@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,5 +15,6 @@ public class MemberDto {
     private String firstname;
     private String username;
     private int age;
+//    private List<RateDto> rates;
 }
 

@@ -3,6 +3,8 @@ package com.night.gather.nightgather.mapper;
 import com.night.gather.nightgather.dto.EventDto;
 import com.night.gather.nightgather.entity.Event;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 
 import java.util.List;
 
@@ -10,6 +12,10 @@ import java.util.List;
 public interface EventMapper {
 
     EventDto toDto(Event event);
+
+    @Named("toDtoInPage")
+    @Mapping(target = "participants", ignore = true)
+    EventDto toDtoInPage(Event event);
 
     Event toEntity(EventDto eventDto);
 

@@ -22,7 +22,7 @@ public class EventService {
     private final EventMapper eventMapper;
 
     public List<EventDto> getAllEvents(Pageable pageable){
-        return eventRepository.findAll(pageable).map(eventMapper::toDto).getContent();
+        return eventRepository.findAll(pageable).map(eventMapper::toDtoInPage).getContent();
     }
 
     public EventDto getEventById(Long id){
