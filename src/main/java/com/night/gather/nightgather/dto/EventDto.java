@@ -13,10 +13,10 @@ import java.util.List;
 public class EventDto {
     private Long id;
     private String address;
-//    private List<UserDto> participants;
+    private List<MemberDto> participants;
     private Integer numberOfPlaces;
     private double price;
     private LocalDateTime datetime;
     private TypeDto type;
-    private UserDto organizer;
+    private MemberDto organizer;
 }

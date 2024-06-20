@@ -27,9 +27,6 @@ public class EventService {
 
     public EventDto getEventById(Long id){
         Optional<Event> eventOptional = eventRepository.findById(id);
-        if(eventOptional.isPresent()){
-            return eventMapper.toDto(eventOptional.get());
-        }
-        return null;
+        return eventOptional.map(eventMapper::toDto).orElse(null);
     }
 }
