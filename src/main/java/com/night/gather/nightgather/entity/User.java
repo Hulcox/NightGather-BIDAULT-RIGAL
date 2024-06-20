@@ -40,6 +40,9 @@ public class User {
     @Column(name = "profile_picture")
     private String profilePicture;
 
+    @Column(name = "globalRating")
+    private double globalRating;
+
     @Column(name = "region",nullable = false, length = 100)
     private String region;
     @Column(name = "city",nullable = false, length = 100)

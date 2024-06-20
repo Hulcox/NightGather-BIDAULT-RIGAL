@@ -4,12 +4,14 @@ import com.night.gather.nightgather.dto.MemberDto;
 import com.night.gather.nightgather.dto.UserDto;
 import com.night.gather.nightgather.entity.User;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = RateMapper.class)
 public interface UserMapper {
 
+    @Mapping(target = "rates", ignore = true)
     UserDto toDto(User user);
 
     User toEntity(UserDto userDto);

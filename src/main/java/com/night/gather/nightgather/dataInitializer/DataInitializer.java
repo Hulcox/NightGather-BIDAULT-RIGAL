@@ -36,6 +36,10 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+        eventRepository.deleteAll();
+        typeRepository.deleteAll();
+        rateRepository.deleteAll();
+        userRepository.deleteAll();
         try {
             if (typeRepository.count() + userRepository.count() + eventRepository.count() + rateRepository.count() == 0) {
                 List<Type> types = initDataType();
@@ -71,7 +75,7 @@ public class DataInitializer implements CommandLineRunner {
     }
 
     private void initDataRate(List<User> users) {
-        List<Rate> rates = RateDataGenerator.generateRates(50, users);
+        List<Rate> rates = RateDataGenerator.generateRates(5, users);
         rateRepository.saveAll(rates);
         log.info("Rates saved.");
     }
