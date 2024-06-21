@@ -24,6 +24,13 @@ public class EventController {
         return ResponseEntity.ok(events);
     }
 
+    @GetMapping("/date")
+    public ResponseEntity<List<EventDto>> getAllEventsByDate(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        List<EventDto> events = eventService.getAllEventsOrderByDate(pageable);
+        return ResponseEntity.ok(events);
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<EventDto> getEvent(@PathVariable Long id) {
         EventDto eventDto = eventService.getEventById(id);

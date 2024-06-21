@@ -25,6 +25,10 @@ public class EventService {
         return eventRepository.findAll(pageable).map(eventMapper::toDtoInPage).getContent();
     }
 
+    public List<EventDto> getAllEventsOrderByDate(Pageable pageable){
+        return eventRepository.findAllOrderByDate(pageable).map(eventMapper::toDto).getContent();
+    }
+
     public EventDto getEventById(Long id){
         Optional<Event> eventOptional = eventRepository.findById(id);
         return eventOptional.map(eventMapper::toDto).orElse(null);
