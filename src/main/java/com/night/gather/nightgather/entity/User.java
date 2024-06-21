@@ -2,6 +2,7 @@ package com.night.gather.nightgather.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.BatchSize;
 
 import java.util.List;
 
@@ -35,6 +36,7 @@ public class User {
     private String bio;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @BatchSize(size = 10)
     private List<Rate> rates;
 
     @Column(name = "profile_picture")
@@ -53,8 +55,10 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id_user"),
             inverseJoinColumns = @JoinColumn(name = "event_id", referencedColumnName = "id_event")
     )
+    @BatchSize(size = 10)
     private List<Event> events;
 
     @OneToMany(mappedBy = "organizer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @BatchSize(size = 10)
     private List<Event> organizedEvents;
 }

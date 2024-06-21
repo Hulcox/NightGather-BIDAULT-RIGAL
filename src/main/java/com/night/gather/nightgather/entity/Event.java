@@ -30,6 +30,7 @@ public class Event {
             joinColumns = @JoinColumn(name = "event_id", referencedColumnName = "id_event"),
             inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id_user")
     )
+    @BatchSize(size = 10)
     private List<User> participants;
 
     @Column(name = "number_of_places", nullable = false)

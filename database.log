@@ -1,370 +1,63 @@
-1718961728212|7|statement|select * from information_schema.sequences
-1718961728266|1|statement|select * from "public"."types" where 1=0
-1718961728271|0|statement|select * from "public"."users" where 1=0
-1718961728287|0|statement|select * from "public"."events" where 1=0
-1718961728292|0|statement|select * from "public"."users" where 1=0
-1718961728305|0|statement|select * from "public"."users" where 1=0
-1718961729182|1|statement|select count(*) from types t1_0
-1718961729185|0|commit|
-1718961729193|0|statement|select count(*) from users u1_0
-1718961729194|0|commit|
-1718961729195|0|statement|select count(*) from events e1_0
-1718961729196|0|commit|
-1718961729197|0|statement|select count(*) from rates r1_0
-1718961729197|0|commit|
-1718961736167|0|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 offset 0 rows fetch first 10 rows only
-1718961736196|11|statement|select count(e1_0.id_event) from events e1_0
-1718961736197|0|commit|
-1718961736200|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718961736202|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=5
-1718961736203|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718961736203|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=10
-1718961736204|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=7
-1718961736205|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=18
-1718961736206|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=12
-1718961736206|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=13
-1718961736207|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=16
-1718961736207|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718961736208|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718961872935|7|statement|select * from information_schema.sequences
-1718961872975|0|statement|select * from "public"."types" where 1=0
-1718961872981|0|statement|select * from "public"."users" where 1=0
-1718961873020|12|statement|select * from "public"."events" where 1=0
-1718961873026|0|statement|select * from "public"."users" where 1=0
-1718961873038|0|statement|select * from "public"."users" where 1=0
-1718961873912|1|statement|select count(*) from types t1_0
-1718961873915|0|commit|
-1718961873917|0|statement|select count(*) from users u1_0
-1718961873917|0|commit|
-1718961873919|0|statement|select count(*) from events e1_0
-1718961873919|0|commit|
-1718961873921|0|statement|select count(*) from rates r1_0
-1718961873921|0|commit|
-1718963059656|18|statement|select * from information_schema.sequences
-1718963059693|0|statement|select * from "public"."types" where 1=0
-1718963059698|0|statement|select * from "public"."users" where 1=0
-1718963059715|0|statement|select * from "public"."events" where 1=0
-1718963059718|0|statement|select * from "public"."users" where 1=0
-1718963059731|0|statement|select * from "public"."users" where 1=0
-1718963180067|6|statement|select * from information_schema.sequences
-1718963180103|0|statement|select * from "public"."types" where 1=0
-1718963180109|0|statement|select * from "public"."users" where 1=0
-1718963180125|0|statement|select * from "public"."events" where 1=0
-1718963180129|0|statement|select * from "public"."users" where 1=0
-1718963180139|0|statement|select * from "public"."users" where 1=0
-1718963306356|7|statement|select * from information_schema.sequences
-1718963306395|0|statement|select * from "public"."types" where 1=0
-1718963306400|0|statement|select * from "public"."users" where 1=0
-1718963306415|0|statement|select * from "public"."events" where 1=0
-1718963306419|0|statement|select * from "public"."users" where 1=0
-1718963306429|0|statement|select * from "public"."users" where 1=0
-1718963307628|11|statement|select count(*) from types t1_0
-1718963307630|0|commit|
-1718963307632|0|statement|select count(*) from users u1_0
-1718963307633|0|commit|
-1718963307635|1|statement|select count(*) from events e1_0
-1718963307636|0|commit|
-1718963307638|0|statement|select count(*) from rates r1_0
-1718963307638|0|commit|
-1718963367699|7|statement|select * from information_schema.sequences
-1718963367736|0|statement|select * from "public"."types" where 1=0
-1718963367741|0|statement|select * from "public"."users" where 1=0
-1718963367756|0|statement|select * from "public"."events" where 1=0
-1718963367759|0|statement|select * from "public"."users" where 1=0
-1718963367770|0|statement|select * from "public"."users" where 1=0
-1718963368719|1|statement|select count(*) from types t1_0
-1718963368721|0|commit|
-1718963368723|0|statement|select count(*) from users u1_0
-1718963368724|0|commit|
-1718963368725|0|statement|select count(*) from events e1_0
-1718963368725|0|commit|
-1718963368727|0|statement|select count(*) from rates r1_0
-1718963368727|0|commit|
-1718963378624|1|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime
-1718963378650|2|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=18
-1718963378654|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718963378655|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=8
-1718963378656|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=14
-1718963378659|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718963378659|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=18
-1718963378660|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=7
-1718963378663|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=16
-1718963378665|2|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=12
-1718963378667|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=17
-1718963378668|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=2
-1718963378669|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=5
-1718963378670|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=17
-1718963378671|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=4
-1718963378672|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=13
-1718963378673|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=10
-1718963378673|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718963378674|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718963378675|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718963378676|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718963378677|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718963378678|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718963378678|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718963378679|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718963378680|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718963378681|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718963436079|0|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 offset 0 rows fetch first 10 rows only
-1718963436088|0|statement|select count(e1_0.id_event) from events e1_0
-1718963436089|0|commit|
-1718963436090|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718963436091|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=5
-1718963436092|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718963436093|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=10
-1718963436094|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=7
-1718963436094|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=18
-1718963436095|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=12
-1718963436096|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=13
-1718963436096|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=16
-1718963436097|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718963436097|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718963476396|0|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime
-1718963476403|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=18
-1718963476404|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718963476405|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=8
-1718963476406|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=14
-1718963476407|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718963476408|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=18
-1718963476408|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=7
-1718963476409|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=16
-1718963476409|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=12
-1718963476410|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=17
-1718963476410|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=2
-1718963476411|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=5
-1718963476412|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=17
-1718963476413|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=4
-1718963476413|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=13
-1718963476414|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=10
-1718963476415|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718963476415|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718963476416|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718963476417|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718963476418|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718963476419|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718963476419|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718963476420|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718963476421|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718963476422|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718963685364|7|statement|select * from information_schema.sequences
-1718963685401|0|statement|select * from "public"."types" where 1=0
-1718963685409|0|statement|select * from "public"."users" where 1=0
-1718963685426|0|statement|select * from "public"."events" where 1=0
-1718963685430|0|statement|select * from "public"."users" where 1=0
-1718963685440|0|statement|select * from "public"."users" where 1=0
-1718964108280|5|statement|select * from information_schema.sequences
-1718964108315|0|statement|select * from "public"."types" where 1=0
-1718964108321|0|statement|select * from "public"."users" where 1=0
-1718964108339|0|statement|select * from "public"."events" where 1=0
-1718964108348|0|statement|select * from "public"."users" where 1=0
-1718964108380|0|statement|select * from "public"."users" where 1=0
-1718964127792|16|statement|select * from information_schema.sequences
-1718964127833|0|statement|select * from "public"."types" where 1=0
-1718964127839|0|statement|select * from "public"."users" where 1=0
-1718964127856|0|statement|select * from "public"."events" where 1=0
-1718964127859|0|statement|select * from "public"."users" where 1=0
-1718964127870|0|statement|select * from "public"."users" where 1=0
-1718964145822|7|statement|select * from information_schema.sequences
-1718964145857|0|statement|select * from "public"."types" where 1=0
-1718964145864|0|statement|select * from "public"."users" where 1=0
-1718964145880|0|statement|select * from "public"."events" where 1=0
-1718964145884|0|statement|select * from "public"."users" where 1=0
-1718964145894|0|statement|select * from "public"."users" where 1=0
-1718964146888|1|statement|select count(*) from types t1_0
-1718964146890|0|commit|
-1718964146892|0|statement|select count(*) from users u1_0
-1718964146892|0|commit|
-1718964146894|0|statement|select count(*) from events e1_0
-1718964146894|0|commit|
-1718964146896|0|statement|select count(*) from rates r1_0
-1718964146896|0|commit|
-1718964150649|2|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964150668|1|statement|select count(e1_0.id_event) from events e1_0
-1718964150673|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964150675|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964150676|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=13
-1718964150677|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964150677|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964150678|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=7
-1718964150679|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=2
-1718964150680|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=5
-1718964228641|7|statement|select * from information_schema.sequences
-1718964228679|0|statement|select * from "public"."types" where 1=0
-1718964228684|0|statement|select * from "public"."users" where 1=0
-1718964228698|0|statement|select * from "public"."events" where 1=0
-1718964228701|0|statement|select * from "public"."users" where 1=0
-1718964228710|0|statement|select * from "public"."users" where 1=0
-1718964229673|1|statement|select count(*) from types t1_0
-1718964229675|0|commit|
-1718964229677|0|statement|select count(*) from users u1_0
-1718964229677|0|commit|
-1718964229679|0|statement|select count(*) from events e1_0
-1718964229679|0|commit|
-1718964229680|0|statement|select count(*) from rates r1_0
-1718964229681|0|commit|
-1718964232660|1|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964232677|0|statement|select count(e1_0.id_event) from events e1_0
-1718964232684|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964232688|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964232689|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964232690|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718964232693|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964232694|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964232695|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964232696|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964232698|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964232699|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964232700|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964232701|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964232703|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964232704|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964245897|0|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964245901|0|statement|select count(e1_0.id_event) from events e1_0
-1718964245902|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964245903|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964245904|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964245905|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718964245907|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964245908|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964245909|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964245911|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964245912|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964245913|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964245915|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964245916|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964245917|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964245917|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964260153|0|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964260160|1|statement|select count(e1_0.id_event) from events e1_0
-1718964260162|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964260163|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964260164|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964260165|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718964260168|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964260169|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964260170|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964260170|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964260171|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964260172|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964260173|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964260174|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964260175|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964260175|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964321030|1|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964321036|1|statement|select count(e1_0.id_event) from events e1_0
-1718964321038|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964321040|1|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964321043|1|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964321049|4|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718964321053|2|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964321055|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964321057|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964321058|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964321071|12|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964321074|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964321075|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964321077|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964321078|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964321079|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964366691|0|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964366697|0|statement|select count(e1_0.id_event) from events e1_0
-1718964366699|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964366700|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964366701|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964366702|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718964366704|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964366705|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964366705|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964366706|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964366707|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964366708|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964366708|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964366709|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964366710|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964366710|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964392444|0|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964392454|1|statement|select count(e1_0.id_event) from events e1_0
-1718964392455|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964392457|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964392459|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964392461|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718964392463|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964392464|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964392465|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964392466|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964392467|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964392467|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964392468|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964392469|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964392469|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964392470|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964687174|8|statement|select * from information_schema.sequences
-1718964687216|0|statement|select * from "public"."types" where 1=0
-1718964687222|0|statement|select * from "public"."users" where 1=0
-1718964687236|0|statement|select * from "public"."events" where 1=0
-1718964687239|0|statement|select * from "public"."users" where 1=0
-1718964687249|0|statement|select * from "public"."users" where 1=0
-1718964749061|7|statement|select * from information_schema.sequences
-1718964749098|0|statement|select * from "public"."types" where 1=0
-1718964749103|0|statement|select * from "public"."users" where 1=0
-1718964749117|0|statement|select * from "public"."events" where 1=0
-1718964749121|0|statement|select * from "public"."users" where 1=0
-1718964749131|0|statement|select * from "public"."users" where 1=0
-1718964750134|0|statement|select count(*) from types t1_0
-1718964750136|0|commit|
-1718964750138|0|statement|select count(*) from users u1_0
-1718964750138|0|commit|
-1718964750139|0|statement|select count(*) from events e1_0
-1718964750139|0|commit|
-1718964750141|0|statement|select count(*) from rates r1_0
-1718964750141|0|commit|
-1718964755637|1|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964755654|0|statement|select count(e1_0.id_event) from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places
-1718964755660|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964755664|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964755665|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964755666|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718964755669|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964755670|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964755671|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964755672|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964755674|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964755675|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964755676|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964755677|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964755678|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964755681|2|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964757731|1|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964757737|0|statement|select count(e1_0.id_event) from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places
-1718964757738|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964757740|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964757741|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964757742|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=6
-1718964757746|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964757748|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964757749|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964757750|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964757752|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964757752|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964757754|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964757755|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964757756|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964757757|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964774152|0|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
-1718964774157|0|statement|select count(e1_0.id_event) from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places
-1718964774158|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
-1718964774159|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
-1718964774160|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
-1718964774161|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
-1718964774163|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
-1718964774164|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
-1718964774165|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
-1718964774166|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
-1718964774167|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
-1718964774169|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
-1718964774170|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
-1718964774171|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
-1718964774172|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
-1718964774173|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=10
+1718965679383|18|statement|select * from information_schema.sequences
+1718965679425|0|statement|select * from "public"."types" where 1=0
+1718965679432|0|statement|select * from "public"."users" where 1=0
+1718965679452|0|statement|select * from "public"."events" where 1=0
+1718965679457|0|statement|select * from "public"."users" where 1=0
+1718965679468|0|statement|select * from "public"."users" where 1=0
+1718965680488|1|statement|select count(*) from types t1_0
+1718965680490|0|commit|
+1718965680492|0|statement|select count(*) from users u1_0
+1718965680494|0|commit|
+1718965680495|0|statement|select count(*) from events e1_0
+1718965680495|0|commit|
+1718965680497|0|statement|select count(*) from rates r1_0
+1718965680497|0|commit|
+1718965684598|2|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
+1718965684616|0|statement|select count(e1_0.id_event) from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places
+1718965684623|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=11
+1718965684627|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
+1718965684642|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=3
+1718965684643|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=9
+1718965684646|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
+1718965684647|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.username from users u1_0 where u1_0.id_user=4
+1718965684648|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=3
+1718965684650|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=19
+1718965684651|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=20
+1718965684652|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=15
+1718965684653|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
+1718965684655|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
+1718965684656|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=8
+1718965684657|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=10
+1718965750632|7|statement|select * from information_schema.sequences
+1718965750669|0|statement|select * from "public"."types" where 1=0
+1718965750675|0|statement|select * from "public"."users" where 1=0
+1718965750689|0|statement|select * from "public"."events" where 1=0
+1718965750693|0|statement|select * from "public"."users" where 1=0
+1718965750704|0|statement|select * from "public"."users" where 1=0
+1718965751711|1|statement|select count(*) from types t1_0
+1718965751713|0|commit|
+1718965751715|0|statement|select count(*) from users u1_0
+1718965751715|0|commit|
+1718965751717|0|statement|select count(*) from events e1_0
+1718965751717|0|commit|
+1718965751719|0|statement|select count(*) from rates r1_0
+1718965751719|0|commit|
+1718965758201|2|statement|select e1_0.id_event,e1_0.address,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
+1718965758218|1|statement|select count(e1_0.id_event) from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places
+1718965758232|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"11","9","3","19","20","15","16","1","8","10"}')
+1718965758241|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=2
+1718965758242|0|statement|select t1_0.id_type,t1_0.type from types t1_0 where t1_0.id_type=1
+1718965831952|7|statement|select * from information_schema.sequences
+1718965831988|0|statement|select * from "public"."types" where 1=0
+1718965831994|0|statement|select * from "public"."users" where 1=0
+1718965832010|0|statement|select * from "public"."events" where 1=0
+1718965832014|0|statement|select * from "public"."users" where 1=0
+1718965832024|0|statement|select * from "public"."users" where 1=0
+1718965833053|11|statement|select count(*) from types t1_0
+1718965833056|0|commit|
+1718965833059|0|statement|select count(*) from users u1_0
+1718965833059|0|commit|
+1718965833060|0|statement|select count(*) from events e1_0
+1718965833061|0|commit|
+1718965833062|0|statement|select count(*) from rates r1_0
+1718965833063|0|commit|
