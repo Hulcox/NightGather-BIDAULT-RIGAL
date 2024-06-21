@@ -2,8 +2,10 @@ package com.night.gather.nightgather.dataGenerator;
 
 import com.github.javafaker.Faker;
 import com.night.gather.nightgather.entity.User;
+import com.night.gather.nightgather.security.Password;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class UserDataGenerator {
@@ -15,7 +17,10 @@ public class UserDataGenerator {
         for (int i = 0; i < count; i++) {
             User user = new User();
             user.setEmail(faker.internet().emailAddress());
-            user.setPassword(faker.internet().password().substring(0,4));
+            byte[] salt = Password.createSalt();
+            String hash = Password.createHash("0000".toCharArray(), salt);
+            user.setSalt(Password.toHex(salt));
+            user.setPassword(hash);
             user.setLastname(faker.name().lastName());
             user.setFirstname(faker.name().firstName());
             user.setUsername(faker.name().username());

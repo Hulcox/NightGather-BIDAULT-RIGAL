@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/users")
@@ -28,6 +29,15 @@ public class UserController {
         UserDto userDto = userService.getUserById(id);
         if (userDto != null) {
             return ResponseEntity.ok(userDto);
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    @PostMapping("/signIn")
+    public ResponseEntity<Object> signIn(@RequestBody UserDto userDto) {
+        Map<String,Object> signedIn = userService.signIn(userDto);
+        if (signedIn != null) {
+            return ResponseEntity.ok(signedIn);
         }
         return ResponseEntity.notFound().build();
     }
