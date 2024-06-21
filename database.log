@@ -1404,3 +1404,714 @@
 1718975337535|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"16","7","15","11","13","12"}')
 1718975337543|0|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0 where t1_0.id_type=2
 1718975337544|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username from users u1_0 where u1_0.id_user=9
+1718975797060|1|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
+1718975797066|0|statement|select count(e1_0.id_event) from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places
+1718975797071|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"9","20","16","7","18","19","5","15","8","11"}')
+1718975797076|0|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0 where t1_0.id_type=1
+1718975797078|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username from users u1_0 where u1_0.id_user=12
+1718975797079|0|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0 where t1_0.id_type=2
+1718975797080|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username from users u1_0 where u1_0.id_user=9
+1718976209941|1|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 join types t1_0 on t1_0.id_type=e1_0.type_id where t1_0.type='VIDEOGAME' order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
+1718976209952|1|statement|select count(e1_0.id_event) from events e1_0 join types t1_0 on t1_0.id_type=e1_0.type_id where t1_0.type='VIDEOGAME'
+1718976209956|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"9","20","18","19","5","8","10","3","2","14"}')
+1718976209963|0|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0 where t1_0.id_type=1
+1718976209965|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username from users u1_0 where u1_0.id_user=9
+1718976227371|0|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 join types t1_0 on t1_0.id_type=e1_0.type_id where t1_0.type='PARTY' order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
+1718976680001|1|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0
+1718976680004|0|commit|
+1718976827633|1|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0
+1718976827635|0|commit|
+1718976833242|1|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0
+1718976833245|1|commit|
+1718976847522|0|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0
+1718976847523|0|commit|
+1718976908256|0|statement|select t1_0.id_type,t1_0.created_at,t1_0.type from types t1_0
+1718976908259|0|commit|
+1718977361684|8|statement|select * from information_schema.sequences
+1718977361713|3|statement|create index idx_event_id_type on events (id_type)
+1718977361742|0|statement|select * from "public"."types" where 1=0
+1718977361747|0|statement|select * from "public"."users" where 1=0
+1718977361763|0|statement|select * from "public"."events" where 1=0
+1718977361767|0|statement|select * from "public"."users" where 1=0
+1718977361777|0|statement|select * from "public"."users" where 1=0
+1718977362512|0|statement|select count(*) from types t1_0
+1718977362513|0|commit|
+1718977362514|0|statement|select count(*) from users u1_0
+1718977362514|0|commit|
+1718977362515|0|statement|select count(*) from events e1_0
+1718977362515|0|commit|
+1718977362517|0|statement|select count(*) from rates r1_0
+1718977362517|0|commit|
+1718977378201|3|statement|select * from information_schema.sequences
+1718977378223|4|statement|create index idx_event_id_type on events (type_id)
+1718977378239|0|statement|select * from "public"."types" where 1=0
+1718977378243|0|statement|select * from "public"."users" where 1=0
+1718977378255|0|statement|select * from "public"."events" where 1=0
+1718977378258|0|statement|select * from "public"."users" where 1=0
+1718977378267|0|statement|select * from "public"."users" where 1=0
+1718977378990|0|statement|select count(*) from types t1_0
+1718977378991|0|commit|
+1718977378992|0|statement|select count(*) from users u1_0
+1718977378993|0|commit|
+1718977378994|0|statement|select count(*) from events e1_0
+1718977378994|0|commit|
+1718977378995|0|statement|select count(*) from rates r1_0
+1718977378995|0|commit|
+1718977493921|1|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 where e1_0.id_event=1
+1718977493947|2|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
+1718977493961|1|statement|select e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from participants_events e1_0 join events e1_1 on e1_1.id_event=e1_0.event_id where e1_0.user_id = any ('{"15","5","8","16","10","3","11","14","19","13"}')
+1718977493971|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"10","2","3","8","13","14","15","19","4","20"}')
+1718977493975|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"6","7","12","5","9","18","11","17"}')
+1718977493977|0|statement|select e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from participants_events e1_0 join events e1_1 on e1_1.id_event=e1_0.event_id where e1_0.user_id = any ('{"7","6","18","17","2","12","20","4"}')
+1718977493978|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id = any ('{"18","13","7","6","17","2","12","20","4","19"}')
+1718977493980|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id = any ('{"18","13","7","6","17","2","12","20","4","19"}')
+1718977493985|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id = any ('{"14","15","5","8","16","10","3","11"}')
+1718977493985|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id = any ('{"14","15","5","8","16","10","3","11"}')
+1718977493987|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=16
+1718977493999|2|statement|update events set address='Apt. 795 03509 Boyce Squares, Lake Chong, NH 07864-8141',datetime='2024-06-25T14:52:18.857+0200',number_of_places=18,organizer_id=NULL,price=14.12,type_id=1 where id_event=1
+1718977494000|0|statement|update events set address='600 Kozey Key, New Edward, NJ 83993-6123',datetime='2024-07-05T14:52:18.858+0200',number_of_places=72,organizer_id=NULL,price=11.76,type_id=1 where id_event=2
+1718977494001|0|statement|update events set address='05666 Courtney Curve, Nestorstad, MI 97089-8520',datetime='2024-07-14T14:52:18.860+0200',number_of_places=41,organizer_id=NULL,price=8.06,type_id=1 where id_event=8
+1718977494002|0|statement|update events set address='Suite 186 3615 Kassulke Field, Hegmannside, HI 41432',datetime='2024-07-02T14:52:18.861+0200',number_of_places=71,organizer_id=NULL,price=12.84,type_id=1 where id_event=14
+1718977494003|0|statement|update events set address='Suite 848 37208 Kuvalis Glens, New Cora, KS 73813-4004',datetime='2024-07-15T14:52:18.862+0200',number_of_places=74,organizer_id=NULL,price=12.02,type_id=2 where id_event=15
+1718977494003|0|statement|update events set address='495 Kirsten Common, West Vella, DE 00927-0322',datetime='2024-07-16T14:52:18.863+0200',number_of_places=69,organizer_id=NULL,price=5.12,type_id=1 where id_event=19
+1718977494004|0|statement|update events set address='2509 Tracey Islands, Lake Marvisburgh, PA 54903-2639',datetime='2024-06-27T14:52:18.858+0200',number_of_places=75,organizer_id=NULL,price=10.61,type_id=1 where id_event=4
+1718977494007|2|statement|delete from participants_events where event_id=1
+1718977494008|0|statement|delete from participants_events where user_id=15
+1718977494008|0|statement|delete from participants_events where user_id=5
+1718977494009|0|statement|delete from participants_events where user_id=8
+1718977494009|0|statement|delete from participants_events where user_id=16
+1718977494009|0|statement|delete from participants_events where user_id=10
+1718977494010|0|statement|delete from participants_events where user_id=3
+1718977494010|0|statement|delete from participants_events where user_id=11
+1718977494010|0|statement|delete from participants_events where user_id=14
+1718977494011|0|statement|delete from participants_events where user_id=19
+1718977494011|0|statement|delete from participants_events where user_id=13
+1718977494011|0|statement|delete from participants_events where user_id=7
+1718977494011|0|statement|delete from participants_events where event_id=10
+1718977494012|0|statement|delete from participants_events where event_id=2
+1718977494012|0|statement|delete from participants_events where event_id=3
+1718977494012|0|statement|delete from participants_events where event_id=8
+1718977494012|0|statement|delete from participants_events where event_id=13
+1718977494013|0|statement|delete from participants_events where event_id=14
+1718977494013|0|statement|delete from participants_events where event_id=15
+1718977494013|0|statement|delete from participants_events where event_id=19
+1718977494013|0|statement|delete from participants_events where event_id=4
+1718977494013|0|statement|delete from participants_events where event_id=20
+1718977494014|0|statement|delete from participants_events where event_id=7
+1718977494014|0|statement|delete from participants_events where event_id=12
+1718977494014|0|statement|delete from participants_events where event_id=5
+1718977494014|0|statement|delete from participants_events where event_id=6
+1718977494014|0|statement|delete from participants_events where event_id=9
+1718977494014|0|statement|delete from participants_events where event_id=18
+1718977494015|0|statement|delete from participants_events where event_id=11
+1718977494015|0|statement|delete from participants_events where event_id=17
+1718977494015|0|statement|delete from participants_events where user_id=6
+1718977494015|0|statement|delete from participants_events where user_id=18
+1718977494015|0|statement|delete from participants_events where user_id=17
+1718977494016|0|statement|delete from participants_events where user_id=2
+1718977494016|0|statement|delete from participants_events where user_id=12
+1718977494016|0|statement|delete from participants_events where user_id=20
+1718977494016|0|statement|delete from participants_events where user_id=4
+1718977494017|0|statement|delete from events where id_event=7
+1718977494018|0|statement|delete from events where id_event=12
+1718977494019|0|statement|delete from rates where id_rate=7
+1718977494019|0|statement|delete from rates where id_rate=21
+1718977494019|0|statement|delete from rates where id_rate=28
+1718977494020|0|statement|delete from users where id_user=18
+1718977494020|0|statement|delete from rates where id_rate=18
+1718977494021|0|statement|delete from rates where id_rate=35
+1718977494021|0|statement|delete from rates where id_rate=44
+1718977494022|0|statement|delete from users where id_user=17
+1718977494022|0|statement|delete from events where id_event=17
+1718977494023|0|statement|delete from events where id_event=20
+1718977494023|0|statement|delete from rates where id_rate=5
+1718977494023|0|statement|delete from rates where id_rate=32
+1718977494023|0|statement|delete from rates where id_rate=40
+1718977494024|0|statement|delete from users where id_user=6
+1718977494024|0|statement|delete from events where id_event=11
+1718977494024|0|statement|delete from events where id_event=13
+1718977494025|0|statement|delete from rates where id_rate=2
+1718977494025|0|statement|delete from rates where id_rate=4
+1718977494025|0|statement|delete from rates where id_rate=10
+1718977494025|0|statement|delete from rates where id_rate=19
+1718977494025|0|statement|delete from rates where id_rate=25
+1718977494026|0|statement|delete from rates where id_rate=33
+1718977494026|0|statement|delete from rates where id_rate=41
+1718977494026|0|statement|delete from rates where id_rate=49
+1718977494026|0|statement|delete from users where id_user=7
+1718977494027|0|statement|delete from events where id_event=9
+1718977494027|0|statement|delete from rates where id_rate=16
+1718977494027|0|statement|delete from rates where id_rate=31
+1718977494028|0|statement|delete from users where id_user=13
+1718977494028|0|statement|delete from rates where id_rate=22
+1718977494028|0|statement|delete from rates where id_rate=26
+1718977494028|0|statement|delete from rates where id_rate=29
+1718977494029|0|statement|delete from rates where id_rate=30
+1718977494029|0|statement|delete from rates where id_rate=47
+1718977494029|0|statement|delete from users where id_user=2
+1718977494029|0|statement|delete from events where id_event=18
+1718977494030|0|statement|delete from users where id_user=12
+1718977494030|0|statement|delete from users where id_user=20
+1718977494030|0|statement|delete from rates where id_rate=3
+1718977494030|0|statement|delete from rates where id_rate=39
+1718977494030|0|statement|delete from rates where id_rate=45
+1718977494031|0|statement|delete from users where id_user=4
+1718977494031|0|statement|delete from events where id_event=6
+1718977494031|0|statement|delete from users where id_user=19
+1718977494031|0|statement|delete from events where id_event=4
+1718977494031|0|statement|delete from rates where id_rate=11
+1718977494032|0|statement|delete from rates where id_rate=12
+1718977494032|0|statement|delete from rates where id_rate=17
+1718977494032|0|statement|delete from users where id_user=14
+1718977494032|0|statement|delete from events where id_event=19
+1718977494033|0|statement|delete from users where id_user=11
+1718977494033|0|statement|delete from events where id_event=15
+1718977494033|0|statement|delete from rates where id_rate=24
+1718977494033|0|statement|delete from users where id_user=3
+1718977494034|0|statement|delete from events where id_event=14
+1718977494034|0|statement|delete from events where id_event=16
+1718977494034|0|statement|delete from rates where id_rate=1
+1718977494034|0|statement|delete from rates where id_rate=42
+1718977494034|0|statement|delete from users where id_user=10
+1718977494035|0|statement|delete from events where id_event=8
+1718977494035|0|statement|delete from rates where id_rate=9
+1718977494035|0|statement|delete from users where id_user=16
+1718977494035|0|statement|delete from events where id_event=3
+1718977494035|0|statement|delete from rates where id_rate=36
+1718977494036|0|statement|delete from rates where id_rate=46
+1718977494036|0|statement|delete from users where id_user=8
+1718977494036|0|statement|delete from events where id_event=2
+1718977494036|0|statement|delete from rates where id_rate=20
+1718977494036|0|statement|delete from rates where id_rate=43
+1718977494037|0|statement|delete from users where id_user=5
+1718977494037|0|statement|delete from events where id_event=10
+1718977494037|0|statement|delete from events where id_event=5
+1718977494037|0|statement|delete from rates where id_rate=8
+1718977494037|0|statement|delete from rates where id_rate=14
+1718977494037|0|statement|delete from rates where id_rate=23
+1718977494038|0|statement|delete from rates where id_rate=37
+1718977494038|0|statement|delete from rates where id_rate=48
+1718977494038|0|statement|delete from users where id_user=15
+1718977494038|0|statement|delete from events where id_event=1
+1718977494039|0|commit|
+1718977522912|5|statement|select * from information_schema.sequences
+1718977522933|10|statement|create table events (id_event bigint generated by default as identity, created_at timestamp(6) not null, address varchar(150) not null, datetime timestamp(6) not null, number_of_places integer not null, price float(53) not null, organizer_id bigint, type_id bigint, primary key (id_event))
+1718977522935|0|statement|create table participants_events (user_id bigint not null, event_id bigint not null)
+1718977522937|2|statement|create table rates (id_rate bigint generated by default as identity, created_at timestamp(6) not null, comment varchar(200), rating integer not null, user_id bigint, primary key (id_rate))
+1718977522942|4|statement|create table types (id_type bigint generated by default as identity, created_at timestamp(6) not null, type varchar(255) not null check (type in ('VIDEOGAME','BOARDGAME','PARTY')), primary key (id_type))
+1718977522946|2|statement|create table users (id_user bigint generated by default as identity, created_at timestamp(6) not null, address varchar(100) not null, age integer not null, bio varchar(255), city varchar(100) not null, email varchar(50) not null, firstname varchar(50) not null, lastname varchar(50) not null, password varchar(255) not null, profile_picture varchar(255), region varchar(100) not null, salt varchar(255) not null, username varchar(50) not null, primary key (id_user))
+1718977522947|1|statement|create index idx_event_id_type on events (type_id)
+1718977522948|0|statement|alter table if exists types drop constraint if exists UK4tchu0t1cxvps06xylvdhu0ik
+1718977522950|1|statement|alter table if exists types add constraint UK4tchu0t1cxvps06xylvdhu0ik unique (type)
+1718977522953|2|statement|alter table if exists events add constraint FKdocju8m76a3f8o6ljh2jrn2ra foreign key (organizer_id) references users
+1718977522954|1|statement|alter table if exists events add constraint FKrcfi88vm62h4x8wpe2bhatt1s foreign key (type_id) references types
+1718977522956|1|statement|alter table if exists participants_events add constraint FK4or2adksqswa73cxc2vkhv3ed foreign key (event_id) references events
+1718977522957|1|statement|alter table if exists participants_events add constraint FK3wf8kti9eyhvh3duwgyi8l5cp foreign key (user_id) references users
+1718977522959|1|statement|alter table if exists rates add constraint FKanlgavwqngljux10mtly8qr6f foreign key (user_id) references users
+1718977523657|0|statement|select count(*) from types t1_0
+1718977523659|0|commit|
+1718977523660|0|statement|select count(*) from users u1_0
+1718977523660|0|commit|
+1718977523661|0|statement|select count(*) from events e1_0
+1718977523662|0|commit|
+1718977523663|0|statement|select count(*) from rates r1_0
+1718977523663|0|commit|
+1718977523671|1|statement|insert into types (created_at,type) values ('2024-06-21T15:45:23.663+0200','VIDEOGAME') returning id_type
+1718977523676|0|statement|insert into types (created_at,type) values ('2024-06-21T15:45:23.663+0200','BOARDGAME') returning id_type
+1718977523676|0|statement|insert into types (created_at,type) values ('2024-06-21T15:45:23.663+0200','PARTY') returning id_type
+1718977523679|0|commit|
+1718977523797|1|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('475 Maggio Light',46,'Nulla asperiores culpa molestiae.','Sanfordmouth','2024-06-21T15:45:23.690+0200','shaniqua.johnson@yahoo.com','Emery','Prohaska','1000:1be9f99d3bc80d9595fb7e6f5b2ad55f4b01f179ddc4b28c:21b620d88dac9df4c997ba159b6ebc7d8be2c99e058c9dc4',NULL,'Louisiana','1be9f99d3bc80d9595fb7e6f5b2ad55f4b01f179ddc4b28c','emmitt.gottlieb') returning id_user
+1718977523798|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('59481 Rau Camp',40,'Omnis suscipit ex laborum voluptas porro sunt reiciendis.','Rennerchester','2024-06-21T15:45:23.747+0200','bernie.turcotte@hotmail.com','Franklin','King','1000:5640487e0fcf674d286f1bfc4377ce29caca05921848cf84:9eb5679bcddd1c0da70317c434413df71f81e7c5ca5757b4',NULL,'Kentucky','5640487e0fcf674d286f1bfc4377ce29caca05921848cf84','damien.lemke') returning id_user
+1718977523799|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('63155 Rowe Courts',47,'Adipisci dolores qui dignissimos id.','Millerfort','2024-06-21T15:45:23.750+0200','colin.rodriguez@gmail.com','Porfirio','Gorczany','1000:a583adcdced41da36226478e9db779cbdee69094392ca956:1b50589c37d1026b1e33898779a24b9b4e500a430e8d309e',NULL,'California','a583adcdced41da36226478e9db779cbdee69094392ca956','jude.leannon') returning id_user
+1718977523800|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('76413 Pfeffer Way',31,'Possimus ad assumenda iure distinctio minima ratione.','New Clydeshire','2024-06-21T15:45:23.753+0200','lauralee.stoltenberg@gmail.com','Ladawn','Kiehn','1000:a8e1809255257e103b0926413f3f17c487f56d05d569d79d:475525c839b57a95ab218075d1a8ee146fd38262f70b4937',NULL,'Alaska','a8e1809255257e103b0926413f3f17c487f56d05d569d79d','gayle.kilback') returning id_user
+1718977523801|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('683 Gulgowski Villages',24,'Voluptates excepturi et ut modi officiis facilis.','Port Clydemouth','2024-06-21T15:45:23.755+0200','vincent.price@hotmail.com','Kira','Lemke','1000:fa5d780244c9ab4f0d55a076dd06190928b958910d8ee75b:b7db7a75e1047857852a1ca0a08b4503e8c4c68fa1a6c15f',NULL,'Washington','fa5d780244c9ab4f0d55a076dd06190928b958910d8ee75b','bud.howell') returning id_user
+1718977523802|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('583 McKenzie Green',29,'Debitis nam in quo dolor autem porro quas.','New Kris','2024-06-21T15:45:23.758+0200','yong.ryan@yahoo.com','Solomon','Fay','1000:2f517e17d3fe342dd856a3bffcec1fc376f7a06158f0cedb:e85c2a27447c85d9e70f22fedc24c9c95432ad1e95d968a0',NULL,'Arizona','2f517e17d3fe342dd856a3bffcec1fc376f7a06158f0cedb','julene.hirthe') returning id_user
+1718977523803|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('24788 Tim Ports',34,'Repudiandae illo qui id cum esse eligendi voluptatem.','Lake Young','2024-06-21T15:45:23.760+0200','sam.heaney@gmail.com','Kiyoko','Kilback','1000:6e94e99cef93d428fe4dce0d37a0b0b20a2c6df2a1705218:177ff473618156b4a648cb98c1dba23c54589b2e175d37ba',NULL,'New Jersey','6e94e99cef93d428fe4dce0d37a0b0b20a2c6df2a1705218','ahmad.gutkowski') returning id_user
+1718977523803|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('171 Dee Prairie',45,'Vel quis magni aut debitis temporibus.','East Hobertstad','2024-06-21T15:45:23.763+0200','brad.hammes@yahoo.com','Kaylee','Zieme','1000:501d2cb3e6aa0321c8ee2d3a84e8221f5e20349ba134e306:5427a3c54c8680c7592c72bbb4a155e90607e5cb5430160b',NULL,'Idaho','501d2cb3e6aa0321c8ee2d3a84e8221f5e20349ba134e306','erlinda.dooley') returning id_user
+1718977523804|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('14291 Savannah Route',33,'Aut id consectetur sed animi repellat.','East Dwight','2024-06-21T15:45:23.765+0200','september.schneider@gmail.com','Chelsea','Hilll','1000:cc42898252e4546cd6da53427cff24a6349c8560f0c80f35:20d4264d209d8c40ed77b10eb76dbad1a814f7137308f2b3',NULL,'New Hampshire','cc42898252e4546cd6da53427cff24a6349c8560f0c80f35','etsuko.breitenberg') returning id_user
+1718977523805|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('892 Weissnat Rapid',40,'Molestiae unde voluptatem optio labore.','Cliftonton','2024-06-21T15:45:23.768+0200','blake.koss@yahoo.com','Long','Christiansen','1000:2cfc509002c7042df88c61911cef5243775b02286387b628:852b5e469d0ea0635d3bb84425fc6dcd18ce1fbc9a8fb216',NULL,'Ohio','2cfc509002c7042df88c61911cef5243775b02286387b628','lowell.abernathy') returning id_user
+1718977523805|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('162 Douglas Points',38,'Autem sunt odio.','South Sonabury','2024-06-21T15:45:23.770+0200','alta.frami@yahoo.com','Tory','Osinski','1000:cbedfff2d79e9142c35c2e21d01efcaec8038e96e08496d3:612281c184b55e42853cc47254f8458f2f1f099c4c1e4d8c',NULL,'North Carolina','cbedfff2d79e9142c35c2e21d01efcaec8038e96e08496d3','sarai.lesch') returning id_user
+1718977523806|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('90458 Samuel Tunnel',37,'Est impedit corrupti.','Muellerfort','2024-06-21T15:45:23.773+0200','alfonzo.kohler@gmail.com','Thomas','Shanahan','1000:97a72bf704c5eeb3e69750f3a882ce6a044cc8f16038e494:546ec0275e5fd033e2c4ee59ec34390ee16285cc61205375',NULL,'West Virginia','97a72bf704c5eeb3e69750f3a882ce6a044cc8f16038e494','gilberto.douglas') returning id_user
+1718977523806|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('894 Salvatore Station',37,'Est optio ullam temporibus expedita dolorum accusantium.','Jerdeburgh','2024-06-21T15:45:23.775+0200','jamey.balistreri@gmail.com','Cherlyn','Kemmer','1000:7a7e112c94042d6df615360295157729abf3483e4eef3aca:33ea411aa966df1b8bafea0ec165f2acf867da2c80255fe7',NULL,'Ohio','7a7e112c94042d6df615360295157729abf3483e4eef3aca','wallace.shanahan') returning id_user
+1718977523807|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('290 Schroeder Loaf',27,'Nemo deleniti ad occaecati labore molestiae voluptatem quo.','Jarrodview','2024-06-21T15:45:23.777+0200','bok.robel@hotmail.com','Peter','Effertz','1000:8d62cba5ef0956b4ce7f6ecba8a67b46d5a0900b645156ba:381a2210ceda3e3494d5f657551e117292c01e340b3cd2fd',NULL,'Nevada','8d62cba5ef0956b4ce7f6ecba8a67b46d5a0900b645156ba','venice.schulist') returning id_user
+1718977523808|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('01802 Jakubowski Vista',30,'Et facere cumque.','South Roxannachester','2024-06-21T15:45:23.780+0200','gilbert.baumbach@yahoo.com','Daisy','Koch','1000:c2673abcb4eb36878ae14d84b94e34b8c772b132277f17b8:b0512da75c8edc123ed5d85b00049cd2a0145b5f0c7e8316',NULL,'South Carolina','c2673abcb4eb36878ae14d84b94e34b8c772b132277f17b8','chi.leuschke') returning id_user
+1718977523808|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('692 Hand Station',44,'Molestiae sed sunt vel ea.','East Mila','2024-06-21T15:45:23.782+0200','fermina.schultz@hotmail.com','Crystal','Bradtke','1000:a6a5869314aeb2115a1c57ae689fb5494c4b63475311a0ba:a79ff388b424461f9b3ba46ead0d8d5c3d54f19379e87727',NULL,'Iowa','a6a5869314aeb2115a1c57ae689fb5494c4b63475311a0ba','kala.murray') returning id_user
+1718977523809|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('136 Herman Prairie',48,'Ad animi consequatur et suscipit consequatur.','Bahringerland','2024-06-21T15:45:23.785+0200','denver.fadel@hotmail.com','Dane','Kuphal','1000:82d150111d276646ab1ed76b5ccfa3cdfcba795a20cf74ee:42ebee39bc381e87956d9aa5e65bc57fce96487b6cec91cb',NULL,'Indiana','82d150111d276646ab1ed76b5ccfa3cdfcba795a20cf74ee','dorthy.herzog') returning id_user
+1718977523809|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('170 Cyndi Path',33,'Ut cum perferendis consequatur.','North Sherri','2024-06-21T15:45:23.787+0200','freddy.gislason@hotmail.com','Latrice','Huel','1000:bc1cc9242b76a34c162c36fb670ece8bcab5425ee0099c88:0c29ded0b69de30410df85005231a1edd8c6cad222c677aa',NULL,'Texas','bc1cc9242b76a34c162c36fb670ece8bcab5425ee0099c88','erwin.blanda') returning id_user
+1718977523810|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('9970 Hackett Shores',28,'Fugiat tempore occaecati molestiae.','Wardborough','2024-06-21T15:45:23.790+0200','columbus.muller@yahoo.com','Sharika','Zboncak','1000:b8adecb392ed5fd64c89ddc55666dc2ff446b381bdab541b:f52b9d75690efe86649ca35ebd01b6824e26775821a44856',NULL,'Nevada','b8adecb392ed5fd64c89ddc55666dc2ff446b381bdab541b','jere.davis') returning id_user
+1718977523811|0|statement|insert into users (address,age,bio,city,created_at,email,firstname,lastname,password,profile_picture,region,salt,username) values ('01998 Deanna Junctions',49,'Magnam maxime illo sunt aut cum dolor.','North Luigiside','2024-06-21T15:45:23.792+0200','amado.smitham@gmail.com','Elisha','Upton','1000:025da54acd84d1cf14f136186c87b38118ecc9ce66ee018b:2c6cbb7aed732858f07d542d989f5a0406537510b8362511',NULL,'Michigan','025da54acd84d1cf14f136186c87b38118ecc9ce66ee018b','delta.russel') returning id_user
+1718977523812|0|commit|
+1718977523834|1|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Apt. 795 04240 Bartoletti Village, Kuhnfurt, AZ 68762-5944','2024-06-21T15:45:23.813+0200','2024-06-24T15:45:23.828+0200',13,15,5.68,2) returning id_event
+1718977523835|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('5777 Russell Lake, Keramouth, ND 97597-8283','2024-06-21T15:45:23.828+0200','2024-07-15T15:45:23.828+0200',40,12,7.98,2) returning id_event
+1718977523836|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('1085 Shaquana Falls, West Rufus, IL 41638-0648','2024-06-21T15:45:23.828+0200','2024-06-29T15:45:23.829+0200',47,8,14.02,1) returning id_event
+1718977523836|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Suite 219 19641 Auer Flat, West Sirena, MD 44875-0013','2024-06-21T15:45:23.829+0200','2024-07-01T15:45:23.829+0200',51,2,5.42,1) returning id_event
+1718977523837|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Apt. 048 5646 Felicita Fields, East Candie, LA 16095-4723','2024-06-21T15:45:23.829+0200','2024-07-08T15:45:23.829+0200',72,6,5.87,2) returning id_event
+1718977523838|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Suite 262 60464 Dietrich Haven, North Rodrigo, NC 69177-2953','2024-06-21T15:45:23.829+0200','2024-07-03T15:45:23.829+0200',46,1,9.57,1) returning id_event
+1718977523839|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Apt. 288 5289 Walker Rue, Lindfort, MI 56424-0952','2024-06-21T15:45:23.829+0200','2024-07-19T15:45:23.829+0200',72,3,8.23,2) returning id_event
+1718977523840|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Apt. 378 174 Buckridge Wells, West Hipolitomouth, KY 32019-7877','2024-06-21T15:45:23.829+0200','2024-06-26T15:45:23.830+0200',55,16,8.08,2) returning id_event
+1718977523840|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Apt. 703 6387 Beer Points, Willmsside, OK 97938','2024-06-21T15:45:23.830+0200','2024-07-09T15:45:23.830+0200',59,6,9.9,1) returning id_event
+1718977523841|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('90340 Shields Village, Lake Leland, SC 33757','2024-06-21T15:45:23.830+0200','2024-06-25T15:45:23.830+0200',81,2,8.54,2) returning id_event
+1718977523841|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('63842 Mayer Locks, Joannashire, HI 15881-5905','2024-06-21T15:45:23.830+0200','2024-07-12T15:45:23.830+0200',71,14,8.44,2) returning id_event
+1718977523842|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Apt. 722 039 Moen Street, Horaciotown, MT 73957','2024-06-21T15:45:23.830+0200','2024-06-28T15:45:23.830+0200',25,14,8.32,1) returning id_event
+1718977523842|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('80751 Carter Views, Judsonchester, TN 61462','2024-06-21T15:45:23.830+0200','2024-07-17T15:45:23.831+0200',23,6,5.66,2) returning id_event
+1718977523843|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('79319 O''Kon Junctions, East Elmerton, UT 30491-9438','2024-06-21T15:45:23.831+0200','2024-07-08T15:45:23.831+0200',63,16,6.57,2) returning id_event
+1718977523844|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('2115 Sung Neck, North Rayfordtown, AK 67991-1854','2024-06-21T15:45:23.831+0200','2024-06-23T15:45:23.831+0200',82,2,12.56,1) returning id_event
+1718977523844|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('08613 Ying Valleys, Schmittville, ND 40533','2024-06-21T15:45:23.831+0200','2024-07-08T15:45:23.831+0200',70,8,11.62,1) returning id_event
+1718977523845|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Suite 246 6561 Jacobs Green, New Daphnehaven, TX 85302-2867','2024-06-21T15:45:23.831+0200','2024-07-03T15:45:23.831+0200',28,10,9.07,2) returning id_event
+1718977523845|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Suite 571 82190 Dixie Flat, South Janisshire, IN 61174','2024-06-21T15:45:23.831+0200','2024-06-26T15:45:23.832+0200',48,14,8.44,2) returning id_event
+1718977523846|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('84965 Abernathy Heights, Hueystad, WI 54337','2024-06-21T15:45:23.832+0200','2024-06-25T15:45:23.832+0200',79,14,13.02,2) returning id_event
+1718977523846|0|statement|insert into events (address,created_at,datetime,number_of_places,organizer_id,price,type_id) values ('Suite 311 540 Jakubowski Views, Brandeside, WA 42288-5884','2024-06-21T15:45:23.832+0200','2024-06-28T15:45:23.832+0200',12,12,7.3,1) returning id_event
+1718977523847|0|commit|
+1718977523854|1|statement|insert into rates (comment,created_at,rating,user_id) values ('Quas beatae maxime.','2024-06-21T15:45:23.848+0200',3,14) returning id_rate
+1718977523854|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Sed explicabo alias aliquam molestiae porro molestiae.','2024-06-21T15:45:23.851+0200',1,18) returning id_rate
+1718977523855|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Fugit voluptates aut.','2024-06-21T15:45:23.851+0200',4,10) returning id_rate
+1718977523856|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Molestiae optio voluptas.','2024-06-21T15:45:23.851+0200',3,6) returning id_rate
+1718977523856|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Totam distinctio suscipit incidunt eum ut ducimus laboriosam.','2024-06-21T15:45:23.851+0200',4,8) returning id_rate
+1718977523857|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Quisquam veniam nihil ex rerum quo laboriosam quam.','2024-06-21T15:45:23.851+0200',2,11) returning id_rate
+1718977523857|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Assumenda illo voluptas ullam.','2024-06-21T15:45:23.851+0200',1,9) returning id_rate
+1718977523858|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Omnis sint voluptatem ratione et enim dolorem odio.','2024-06-21T15:45:23.851+0200',4,3) returning id_rate
+1718977523858|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Accusantium id nulla deserunt aut.','2024-06-21T15:45:23.851+0200',2,8) returning id_rate
+1718977523858|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Molestiae qui dolorum in sit.','2024-06-21T15:45:23.851+0200',2,1) returning id_rate
+1718977523859|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Voluptas sit asperiores.','2024-06-21T15:45:23.851+0200',2,2) returning id_rate
+1718977523859|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Neque incidunt dolorum optio rerum adipisci.','2024-06-21T15:45:23.851+0200',4,7) returning id_rate
+1718977523860|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Omnis architecto sed vitae quo amet error dignissimos.','2024-06-21T15:45:23.851+0200',3,16) returning id_rate
+1718977523860|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Animi totam nihil tenetur.','2024-06-21T15:45:23.851+0200',4,4) returning id_rate
+1718977523861|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Ut similique eligendi tempore.','2024-06-21T15:45:23.851+0200',4,6) returning id_rate
+1718977523861|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Ab eum dolorum.','2024-06-21T15:45:23.851+0200',2,9) returning id_rate
+1718977523861|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Exercitationem illo sit voluptatem sed.','2024-06-21T15:45:23.851+0200',4,16) returning id_rate
+1718977523862|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Enim quia repudiandae.','2024-06-21T15:45:23.851+0200',3,1) returning id_rate
+1718977523862|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Enim quia quis maxime assumenda.','2024-06-21T15:45:23.851+0200',1,15) returning id_rate
+1718977523863|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Qui accusamus qui tenetur et minima ipsa autem.','2024-06-21T15:45:23.851+0200',1,4) returning id_rate
+1718977523863|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Quidem ullam vitae est quia atque veritatis.','2024-06-21T15:45:23.851+0200',2,7) returning id_rate
+1718977523863|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Aliquam distinctio corrupti voluptatem corporis mollitia.','2024-06-21T15:45:23.851+0200',2,12) returning id_rate
+1718977523864|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Autem quis vel qui et et quas.','2024-06-21T15:45:23.851+0200',2,18) returning id_rate
+1718977523864|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Est omnis commodi quas possimus maiores et.','2024-06-21T15:45:23.851+0200',4,11) returning id_rate
+1718977523865|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Distinctio exercitationem voluptas.','2024-06-21T15:45:23.851+0200',1,6) returning id_rate
+1718977523865|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Aperiam est rerum illo sed.','2024-06-21T15:45:23.851+0200',3,9) returning id_rate
+1718977523865|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Accusamus suscipit qui saepe.','2024-06-21T15:45:23.851+0200',2,5) returning id_rate
+1718977523866|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Similique reprehenderit magni voluptatem alias laboriosam sed.','2024-06-21T15:45:23.851+0200',4,5) returning id_rate
+1718977523866|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Sequi temporibus modi culpa perspiciatis voluptatibus enim dicta.','2024-06-21T15:45:23.851+0200',2,2) returning id_rate
+1718977523866|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Ex est odio voluptatum corporis.','2024-06-21T15:45:23.851+0200',4,9) returning id_rate
+1718977523867|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Sed est omnis et dicta inventore.','2024-06-21T15:45:23.851+0200',4,8) returning id_rate
+1718977523867|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Natus delectus fugit consequuntur et.','2024-06-21T15:45:23.851+0200',3,9) returning id_rate
+1718977523868|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Ut accusamus ut officiis provident libero et.','2024-06-21T15:45:23.852+0200',1,17) returning id_rate
+1718977523868|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Nihil pariatur eos velit quasi rerum.','2024-06-21T15:45:23.852+0200',4,6) returning id_rate
+1718977523868|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Aut et ea voluptates assumenda debitis sit ratione.','2024-06-21T15:45:23.852+0200',3,7) returning id_rate
+1718977523869|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Voluptates voluptas est molestiae praesentium.','2024-06-21T15:45:23.852+0200',4,4) returning id_rate
+1718977523869|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Ut rerum sed quisquam maiores.','2024-06-21T15:45:23.852+0200',4,17) returning id_rate
+1718977523870|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Quas minima non et.','2024-06-21T15:45:23.852+0200',2,10) returning id_rate
+1718977523870|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Asperiores maxime aut itaque pariatur laudantium nihil omnis.','2024-06-21T15:45:23.852+0200',3,8) returning id_rate
+1718977523870|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Nihil et iste facilis mollitia.','2024-06-21T15:45:23.852+0200',2,9) returning id_rate
+1718977523871|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Eligendi est quod enim omnis quis eos.','2024-06-21T15:45:23.852+0200',2,5) returning id_rate
+1718977523871|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Odio architecto corporis.','2024-06-21T15:45:23.852+0200',4,14) returning id_rate
+1718977523872|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Eum et recusandae eum.','2024-06-21T15:45:23.852+0200',4,10) returning id_rate
+1718977523872|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Voluptas excepturi molestiae distinctio voluptatem ut consequuntur.','2024-06-21T15:45:23.852+0200',2,14) returning id_rate
+1718977523872|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Quibusdam est enim eum ratione illum.','2024-06-21T15:45:23.852+0200',1,4) returning id_rate
+1718977523873|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Doloremque asperiores sint.','2024-06-21T15:45:23.852+0200',1,2) returning id_rate
+1718977523873|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Est quisquam eum.','2024-06-21T15:45:23.852+0200',2,10) returning id_rate
+1718977523874|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Sed fugiat eveniet reprehenderit enim voluptate.','2024-06-21T15:45:23.852+0200',4,12) returning id_rate
+1718977523874|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Velit rerum quibusdam non ducimus velit.','2024-06-21T15:45:23.852+0200',3,8) returning id_rate
+1718977523875|0|statement|insert into rates (comment,created_at,rating,user_id) values ('Provident quo consequatur tempore illo et dicta voluptas.','2024-06-21T15:45:23.852+0200',4,12) returning id_rate
+1718977523875|0|commit|
+1718977523886|1|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id,p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id left join users p1_1 on p1_1.id_user=p1_0.user_id where e1_0.id_event=1
+1718977523894|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=14
+1718977523895|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=14
+1718977523896|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=14
+1718977523898|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=15
+1718977523899|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=15
+1718977523899|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=15
+1718977523900|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=10
+1718977523900|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=10
+1718977523901|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=10
+1718977523902|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=7
+1718977523903|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=7
+1718977523903|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=7
+1718977523904|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=3
+1718977523905|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=3
+1718977523905|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=3
+1718977523906|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=8
+1718977523907|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=8
+1718977523908|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=8
+1718977523909|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=6
+1718977523909|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=6
+1718977523910|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=6
+1718977523911|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=5
+1718977523911|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=5
+1718977523912|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=5
+1718977523912|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=18
+1718977523913|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=18
+1718977523913|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=18
+1718977523914|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=20
+1718977523914|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=20
+1718977523915|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=20
+1718977523915|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=1
+1718977523915|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=1
+1718977523916|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=1
+1718977523916|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=17
+1718977523916|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=17
+1718977523917|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=17
+1718977523917|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=2
+1718977523918|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=2
+1718977523918|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=2
+1718977523919|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=9
+1718977523919|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=9
+1718977523920|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=9
+1718977523920|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=13
+1718977523921|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=13
+1718977523921|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=13
+1718977523921|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=19
+1718977523922|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=19
+1718977523922|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=19
+1718977523922|0|statement|select u1_0.id_user,u1_0.address,u1_0.age,u1_0.bio,u1_0.city,u1_0.created_at,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.profile_picture,u1_0.region,u1_0.salt,u1_0.username,e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from users u1_0 left join participants_events e1_0 on u1_0.id_user=e1_0.user_id left join events e1_1 on e1_1.id_event=e1_0.event_id where u1_0.id_user=16
+1718977523923|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id=16
+1718977523923|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id=16
+1718977523924|0|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id,p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id left join users p1_1 on p1_1.id_user=p1_0.user_id where e1_0.id_event=2
+1718977523931|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"3","13","6","4","10","15","8","16","5","9"}')
+1718977523932|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"7","11","12","18","19","17","14"}')
+1718977523936|0|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id,p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id left join users p1_1 on p1_1.id_user=p1_0.user_id where e1_0.id_event=20
+1718977523945|0|statement|insert into participants_events (event_id,user_id) values (1,14)
+1718977523945|0|statement|insert into participants_events (event_id,user_id) values (1,15)
+1718977523945|0|statement|insert into participants_events (event_id,user_id) values (1,10)
+1718977523945|0|statement|insert into participants_events (event_id,user_id) values (1,7)
+1718977523946|0|statement|insert into participants_events (event_id,user_id) values (1,3)
+1718977523946|0|statement|insert into participants_events (event_id,user_id) values (1,8)
+1718977523946|0|statement|insert into participants_events (event_id,user_id) values (1,6)
+1718977523946|0|statement|insert into participants_events (event_id,user_id) values (1,5)
+1718977523946|0|statement|insert into participants_events (event_id,user_id) values (1,18)
+1718977523958|11|statement|insert into participants_events (event_id,user_id) values (1,20)
+1718977523958|0|statement|insert into participants_events (event_id,user_id) values (1,1)
+1718977523959|0|statement|insert into participants_events (event_id,user_id) values (1,17)
+1718977523959|0|statement|insert into participants_events (event_id,user_id) values (1,2)
+1718977523959|0|statement|insert into participants_events (event_id,user_id) values (1,9)
+1718977523959|0|statement|insert into participants_events (event_id,user_id) values (1,13)
+1718977523960|0|statement|insert into participants_events (event_id,user_id) values (1,19)
+1718977523960|0|statement|insert into participants_events (event_id,user_id) values (1,16)
+1718977523960|0|statement|insert into participants_events (event_id,user_id) values (11,14)
+1718977523960|0|statement|insert into participants_events (event_id,user_id) values (11,15)
+1718977523960|0|statement|insert into participants_events (event_id,user_id) values (11,10)
+1718977523961|0|statement|insert into participants_events (event_id,user_id) values (11,7)
+1718977523961|0|statement|insert into participants_events (event_id,user_id) values (11,3)
+1718977523961|0|statement|insert into participants_events (event_id,user_id) values (11,8)
+1718977523961|0|statement|insert into participants_events (event_id,user_id) values (11,6)
+1718977523961|0|statement|insert into participants_events (event_id,user_id) values (11,5)
+1718977523961|0|statement|insert into participants_events (event_id,user_id) values (11,18)
+1718977523961|0|statement|insert into participants_events (event_id,user_id) values (11,20)
+1718977523962|0|statement|insert into participants_events (event_id,user_id) values (11,1)
+1718977523962|0|statement|insert into participants_events (event_id,user_id) values (11,17)
+1718977523962|0|statement|insert into participants_events (event_id,user_id) values (11,2)
+1718977523962|0|statement|insert into participants_events (event_id,user_id) values (11,9)
+1718977523962|0|statement|insert into participants_events (event_id,user_id) values (12,14)
+1718977523962|0|statement|insert into participants_events (event_id,user_id) values (12,15)
+1718977523963|0|statement|insert into participants_events (event_id,user_id) values (12,10)
+1718977523963|0|statement|insert into participants_events (event_id,user_id) values (12,7)
+1718977523963|0|statement|insert into participants_events (event_id,user_id) values (12,3)
+1718977523963|0|statement|insert into participants_events (event_id,user_id) values (12,8)
+1718977523963|0|statement|insert into participants_events (event_id,user_id) values (12,6)
+1718977523963|0|statement|insert into participants_events (event_id,user_id) values (12,5)
+1718977523963|0|statement|insert into participants_events (event_id,user_id) values (12,18)
+1718977523964|0|statement|insert into participants_events (event_id,user_id) values (12,20)
+1718977523964|0|statement|insert into participants_events (event_id,user_id) values (12,1)
+1718977523964|0|statement|insert into participants_events (event_id,user_id) values (12,17)
+1718977523964|0|statement|insert into participants_events (event_id,user_id) values (12,2)
+1718977523964|0|statement|insert into participants_events (event_id,user_id) values (18,14)
+1718977523964|0|statement|insert into participants_events (event_id,user_id) values (18,15)
+1718977523964|0|statement|insert into participants_events (event_id,user_id) values (18,10)
+1718977523965|0|statement|insert into participants_events (event_id,user_id) values (18,7)
+1718977523965|0|statement|insert into participants_events (event_id,user_id) values (18,3)
+1718977523965|0|statement|insert into participants_events (event_id,user_id) values (18,8)
+1718977523965|0|statement|insert into participants_events (event_id,user_id) values (18,6)
+1718977523965|0|statement|insert into participants_events (event_id,user_id) values (18,5)
+1718977523965|0|statement|insert into participants_events (event_id,user_id) values (18,18)
+1718977523966|0|statement|insert into participants_events (event_id,user_id) values (18,20)
+1718977523966|0|statement|insert into participants_events (event_id,user_id) values (18,1)
+1718977523966|0|statement|insert into participants_events (event_id,user_id) values (18,17)
+1718977523966|0|statement|insert into participants_events (event_id,user_id) values (19,14)
+1718977523966|0|statement|insert into participants_events (event_id,user_id) values (19,15)
+1718977523966|0|statement|insert into participants_events (event_id,user_id) values (19,10)
+1718977523966|0|statement|insert into participants_events (event_id,user_id) values (19,7)
+1718977523967|0|statement|insert into participants_events (event_id,user_id) values (19,3)
+1718977523967|0|statement|insert into participants_events (event_id,user_id) values (19,8)
+1718977523967|0|statement|insert into participants_events (event_id,user_id) values (17,14)
+1718977523967|0|statement|insert into participants_events (event_id,user_id) values (17,15)
+1718977523967|0|statement|insert into participants_events (event_id,user_id) values (17,10)
+1718977523968|0|statement|insert into participants_events (event_id,user_id) values (17,7)
+1718977523968|0|statement|insert into participants_events (event_id,user_id) values (17,3)
+1718977523968|0|statement|insert into participants_events (event_id,user_id) values (17,8)
+1718977523968|0|statement|insert into participants_events (event_id,user_id) values (17,6)
+1718977523968|0|statement|insert into participants_events (event_id,user_id) values (17,5)
+1718977523968|0|statement|insert into participants_events (event_id,user_id) values (17,18)
+1718977523969|0|statement|insert into participants_events (event_id,user_id) values (7,14)
+1718977523969|0|statement|insert into participants_events (event_id,user_id) values (7,15)
+1718977523969|0|statement|insert into participants_events (event_id,user_id) values (7,10)
+1718977523969|0|statement|insert into participants_events (event_id,user_id) values (7,7)
+1718977523969|0|statement|insert into participants_events (event_id,user_id) values (7,3)
+1718977523970|0|statement|insert into participants_events (event_id,user_id) values (7,8)
+1718977523970|0|statement|insert into participants_events (event_id,user_id) values (7,6)
+1718977523970|0|statement|insert into participants_events (event_id,user_id) values (3,14)
+1718977523970|0|statement|insert into participants_events (event_id,user_id) values (3,15)
+1718977523970|0|statement|insert into participants_events (event_id,user_id) values (3,10)
+1718977523971|0|statement|insert into participants_events (event_id,user_id) values (3,7)
+1718977523971|0|statement|insert into participants_events (event_id,user_id) values (3,3)
+1718977523971|0|statement|insert into participants_events (event_id,user_id) values (3,8)
+1718977523971|0|statement|insert into participants_events (event_id,user_id) values (3,6)
+1718977523971|0|statement|insert into participants_events (event_id,user_id) values (3,5)
+1718977523971|0|statement|insert into participants_events (event_id,user_id) values (3,18)
+1718977523972|0|statement|insert into participants_events (event_id,user_id) values (3,20)
+1718977523972|0|statement|insert into participants_events (event_id,user_id) values (3,1)
+1718977523972|0|statement|insert into participants_events (event_id,user_id) values (3,17)
+1718977523972|0|statement|insert into participants_events (event_id,user_id) values (3,2)
+1718977523972|0|statement|insert into participants_events (event_id,user_id) values (3,9)
+1718977523973|0|statement|insert into participants_events (event_id,user_id) values (16,14)
+1718977523973|0|statement|insert into participants_events (event_id,user_id) values (16,15)
+1718977523973|0|statement|insert into participants_events (event_id,user_id) values (16,10)
+1718977523973|0|statement|insert into participants_events (event_id,user_id) values (16,7)
+1718977523973|0|statement|insert into participants_events (event_id,user_id) values (16,3)
+1718977523973|0|statement|insert into participants_events (event_id,user_id) values (16,8)
+1718977523973|0|statement|insert into participants_events (event_id,user_id) values (16,6)
+1718977523974|0|statement|insert into participants_events (event_id,user_id) values (9,14)
+1718977523974|0|statement|insert into participants_events (event_id,user_id) values (9,15)
+1718977523974|0|statement|insert into participants_events (event_id,user_id) values (9,10)
+1718977523974|0|statement|insert into participants_events (event_id,user_id) values (9,7)
+1718977523974|0|statement|insert into participants_events (event_id,user_id) values (9,3)
+1718977523974|0|statement|insert into participants_events (event_id,user_id) values (9,8)
+1718977523975|0|statement|insert into participants_events (event_id,user_id) values (9,6)
+1718977523975|0|statement|insert into participants_events (event_id,user_id) values (9,5)
+1718977523975|0|statement|insert into participants_events (event_id,user_id) values (13,14)
+1718977523975|0|statement|insert into participants_events (event_id,user_id) values (13,15)
+1718977523975|0|statement|insert into participants_events (event_id,user_id) values (13,10)
+1718977523975|0|statement|insert into participants_events (event_id,user_id) values (13,7)
+1718977523975|0|statement|insert into participants_events (event_id,user_id) values (13,3)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,8)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,6)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,5)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,18)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,20)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,1)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,17)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,2)
+1718977523976|0|statement|insert into participants_events (event_id,user_id) values (13,9)
+1718977523977|0|statement|insert into participants_events (event_id,user_id) values (13,13)
+1718977523977|0|statement|insert into participants_events (event_id,user_id) values (13,19)
+1718977523977|0|statement|insert into participants_events (event_id,user_id) values (13,16)
+1718977523977|0|statement|insert into participants_events (event_id,user_id) values (6,14)
+1718977523977|0|statement|insert into participants_events (event_id,user_id) values (6,15)
+1718977523977|0|statement|insert into participants_events (event_id,user_id) values (4,14)
+1718977523977|0|statement|insert into participants_events (event_id,user_id) values (4,15)
+1718977523978|0|statement|insert into participants_events (event_id,user_id) values (4,10)
+1718977523978|0|statement|insert into participants_events (event_id,user_id) values (4,7)
+1718977523978|0|statement|insert into participants_events (event_id,user_id) values (4,3)
+1718977523978|0|statement|insert into participants_events (event_id,user_id) values (4,8)
+1718977523978|0|statement|insert into participants_events (event_id,user_id) values (4,6)
+1718977523978|0|statement|insert into participants_events (event_id,user_id) values (4,5)
+1718977523978|0|statement|insert into participants_events (event_id,user_id) values (4,18)
+1718977523978|0|statement|insert into participants_events (event_id,user_id) values (10,14)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (10,15)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (10,10)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (10,7)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (10,3)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (10,8)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (10,6)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (10,5)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (10,18)
+1718977523979|0|statement|insert into participants_events (event_id,user_id) values (15,14)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,15)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,10)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,7)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,3)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,8)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,6)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,5)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,18)
+1718977523980|0|statement|insert into participants_events (event_id,user_id) values (15,20)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (15,1)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (15,17)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (15,2)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (15,9)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (8,14)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (8,15)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (8,10)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (8,7)
+1718977523981|0|statement|insert into participants_events (event_id,user_id) values (8,3)
+1718977523982|0|statement|insert into participants_events (event_id,user_id) values (8,8)
+1718977523982|0|statement|insert into participants_events (event_id,user_id) values (8,6)
+1718977523982|0|statement|insert into participants_events (event_id,user_id) values (8,5)
+1718977523982|0|statement|insert into participants_events (event_id,user_id) values (8,18)
+1718977523982|0|statement|insert into participants_events (event_id,user_id) values (14,14)
+1718977523982|0|statement|insert into participants_events (event_id,user_id) values (14,15)
+1718977523982|0|statement|insert into participants_events (event_id,user_id) values (14,10)
+1718977523982|0|statement|insert into participants_events (event_id,user_id) values (14,7)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,3)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,8)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,6)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,5)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,18)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,20)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,1)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,17)
+1718977523983|0|statement|insert into participants_events (event_id,user_id) values (14,2)
+1718977523984|0|statement|insert into participants_events (event_id,user_id) values (14,9)
+1718977523984|0|statement|insert into participants_events (event_id,user_id) values (2,14)
+1718977523984|0|statement|insert into participants_events (event_id,user_id) values (2,15)
+1718977523984|0|statement|insert into participants_events (event_id,user_id) values (2,10)
+1718977523984|0|statement|insert into participants_events (event_id,user_id) values (2,7)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (2,3)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (2,8)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (20,14)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (20,15)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (20,10)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (20,7)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (20,3)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (20,8)
+1718977523985|0|statement|insert into participants_events (event_id,user_id) values (20,6)
+1718977523986|0|statement|insert into participants_events (event_id,user_id) values (20,5)
+1718977523986|0|statement|insert into participants_events (event_id,user_id) values (20,18)
+1718977523986|0|statement|insert into participants_events (event_id,user_id) values (20,20)
+1718977523986|0|statement|insert into participants_events (event_id,user_id) values (20,1)
+1718977523986|0|statement|insert into participants_events (event_id,user_id) values (20,17)
+1718977523986|0|statement|insert into participants_events (event_id,user_id) values (20,2)
+1718977523986|0|commit|
+1718977537085|0|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 where e1_0.id_event=1
+1718977537087|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=1
+1718977537089|0|statement|select e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from participants_events e1_0 join events e1_1 on e1_1.id_event=e1_0.event_id where e1_0.user_id = any ('{"14","15","10","7","3","8","6","5","18","20"}')
+1718977537094|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"11","12","18","19","17","7","3","16","9","13"}')
+1718977537096|1|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"4","6","10","15","8","14","2","20"}')
+1718977537097|0|statement|select e1_0.user_id,e1_1.id_event,e1_1.address,e1_1.created_at,e1_1.datetime,e1_1.number_of_places,e1_1.organizer_id,e1_1.price,e1_1.type_id from participants_events e1_0 join events e1_1 on e1_1.id_event=e1_0.event_id where e1_0.user_id = any ('{"1","17","2","9","13","19","16"}')
+1718977537098|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id = any ('{"17","20","1","2","9","13","19","16","5","18"}')
+1718977537098|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id = any ('{"17","20","1","2","9","13","19","16","5","18"}')
+1718977537100|0|statement|select oe1_0.organizer_id,oe1_0.id_event,oe1_0.address,oe1_0.created_at,oe1_0.datetime,oe1_0.number_of_places,oe1_0.price,oe1_0.type_id from events oe1_0 where oe1_0.organizer_id = any ('{"6","14","15","10","7","3","8"}')
+1718977537101|0|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id=5
+1718977537101|0|statement|select r1_0.user_id,r1_0.id_rate,r1_0.comment,r1_0.created_at,r1_0.rating from rates r1_0 where r1_0.user_id = any ('{"6","14","15","10","7","3","8"}')
+1718977537105|0|statement|update events set address='Apt. 795 04240 Bartoletti Village, Kuhnfurt, AZ 68762-5944',datetime='2024-06-24T15:45:23.828+0200',number_of_places=13,organizer_id=NULL,price=5.68,type_id=2 where id_event=1
+1718977537105|0|statement|update events set address='2115 Sung Neck, North Rayfordtown, AK 67991-1854',datetime='2024-06-23T15:45:23.831+0200',number_of_places=82,organizer_id=NULL,price=12.56,type_id=1 where id_event=15
+1718977537106|0|statement|delete from participants_events where event_id=1
+1718977537106|0|statement|delete from participants_events where user_id=14
+1718977537106|0|statement|delete from participants_events where user_id=15
+1718977537106|0|statement|delete from participants_events where user_id=10
+1718977537106|0|statement|delete from participants_events where user_id=7
+1718977537107|0|statement|delete from participants_events where user_id=3
+1718977537107|0|statement|delete from participants_events where user_id=8
+1718977537107|0|statement|delete from participants_events where user_id=6
+1718977537107|0|statement|delete from participants_events where user_id=5
+1718977537107|0|statement|delete from participants_events where user_id=18
+1718977537107|0|statement|delete from participants_events where user_id=20
+1718977537107|0|statement|delete from participants_events where user_id=1
+1718977537107|0|statement|delete from participants_events where user_id=17
+1718977537108|0|statement|delete from participants_events where user_id=2
+1718977537108|0|statement|delete from participants_events where user_id=9
+1718977537108|0|statement|delete from participants_events where user_id=13
+1718977537108|0|statement|delete from participants_events where user_id=19
+1718977537108|0|statement|delete from participants_events where user_id=16
+1718977537108|0|statement|delete from participants_events where event_id=11
+1718977537108|0|statement|delete from participants_events where event_id=12
+1718977537109|0|statement|delete from participants_events where event_id=18
+1718977537109|0|statement|delete from participants_events where event_id=19
+1718977537109|0|statement|delete from participants_events where event_id=17
+1718977537109|0|statement|delete from participants_events where event_id=7
+1718977537109|0|statement|delete from participants_events where event_id=3
+1718977537110|0|statement|delete from participants_events where event_id=16
+1718977537110|0|statement|delete from participants_events where event_id=9
+1718977537110|0|statement|delete from participants_events where event_id=13
+1718977537110|0|statement|delete from participants_events where event_id=6
+1718977537110|0|statement|delete from participants_events where event_id=4
+1718977537110|0|statement|delete from participants_events where event_id=10
+1718977537110|0|statement|delete from participants_events where event_id=15
+1718977537111|0|statement|delete from participants_events where event_id=8
+1718977537111|0|statement|delete from participants_events where event_id=14
+1718977537111|0|statement|delete from participants_events where event_id=2
+1718977537111|0|statement|delete from participants_events where event_id=20
+1718977537112|0|statement|delete from events where id_event=9
+1718977537113|0|statement|delete from events where id_event=4
+1718977537113|0|statement|delete from events where id_event=10
+1718977537113|0|statement|delete from rates where id_rate=33
+1718977537114|0|statement|delete from rates where id_rate=37
+1718977537114|0|statement|delete from users where id_user=17
+1718977537114|0|statement|delete from rates where id_rate=11
+1718977537114|0|statement|delete from rates where id_rate=29
+1718977537114|0|statement|delete from rates where id_rate=46
+1718977537115|0|statement|delete from users where id_user=2
+1718977537115|0|statement|delete from events where id_event=20
+1718977537115|0|statement|delete from events where id_event=6
+1718977537115|0|statement|delete from rates where id_rate=10
+1718977537116|0|statement|delete from rates where id_rate=18
+1718977537116|0|statement|delete from users where id_user=1
+1718977537116|0|statement|delete from rates where id_rate=7
+1718977537117|0|statement|delete from rates where id_rate=16
+1718977537117|0|statement|delete from rates where id_rate=26
+1718977537117|0|statement|delete from rates where id_rate=30
+1718977537117|0|statement|delete from rates where id_rate=32
+1718977537117|0|statement|delete from rates where id_rate=40
+1718977537118|0|statement|delete from users where id_user=9
+1718977537118|0|statement|delete from events where id_event=14
+1718977537118|0|statement|delete from users where id_user=20
+1718977537119|0|statement|delete from events where id_event=15
+1718977537119|0|statement|delete from events where id_event=8
+1718977537119|0|statement|delete from rates where id_rate=2
+1718977537119|0|statement|delete from rates where id_rate=23
+1718977537119|0|statement|delete from users where id_user=18
+1718977537120|0|statement|delete from users where id_user=13
+1718977537120|0|statement|delete from users where id_user=19
+1718977537120|0|statement|delete from rates where id_rate=13
+1718977537120|0|statement|delete from rates where id_rate=17
+1718977537121|0|statement|delete from users where id_user=16
+1718977537121|0|statement|delete from events where id_event=13
+1718977537121|0|statement|delete from rates where id_rate=27
+1718977537121|0|statement|delete from rates where id_rate=28
+1718977537121|0|statement|delete from rates where id_rate=41
+1718977537121|0|statement|delete from users where id_user=5
+1718977537121|0|statement|delete from events where id_event=3
+1718977537122|0|statement|delete from events where id_event=16
+1718977537122|0|statement|delete from events where id_event=5
+1718977537122|0|statement|delete from rates where id_rate=4
+1718977537122|0|statement|delete from rates where id_rate=15
+1718977537122|0|statement|delete from rates where id_rate=25
+1718977537122|0|statement|delete from rates where id_rate=34
+1718977537122|0|statement|delete from users where id_user=6
+1718977537122|0|statement|delete from events where id_event=7
+1718977537123|0|statement|delete from events where id_event=2
+1718977537123|0|statement|delete from rates where id_rate=5
+1718977537123|0|statement|delete from rates where id_rate=9
+1718977537123|0|statement|delete from rates where id_rate=31
+1718977537123|0|statement|delete from rates where id_rate=39
+1718977537123|0|statement|delete from rates where id_rate=49
+1718977537123|0|statement|delete from users where id_user=8
+1718977537123|0|statement|delete from events where id_event=17
+1718977537123|0|statement|delete from rates where id_rate=8
+1718977537124|0|statement|delete from users where id_user=3
+1718977537124|0|statement|delete from events where id_event=19
+1718977537124|0|statement|delete from rates where id_rate=12
+1718977537124|0|statement|delete from rates where id_rate=21
+1718977537124|0|statement|delete from rates where id_rate=35
+1718977537124|0|statement|delete from users where id_user=7
+1718977537124|0|statement|delete from events where id_event=18
+1718977537124|0|statement|delete from rates where id_rate=3
+1718977537125|0|statement|delete from rates where id_rate=38
+1718977537125|0|statement|delete from rates where id_rate=43
+1718977537125|0|statement|delete from rates where id_rate=47
+1718977537125|0|statement|delete from users where id_user=10
+1718977537125|0|statement|delete from events where id_event=12
+1718977537125|0|statement|delete from rates where id_rate=19
+1718977537125|0|statement|delete from users where id_user=15
+1718977537125|0|statement|delete from events where id_event=11
+1718977537126|0|statement|delete from rates where id_rate=1
+1718977537126|0|statement|delete from rates where id_rate=42
+1718977537126|0|statement|delete from rates where id_rate=44
+1718977537126|0|statement|delete from users where id_user=14
+1718977537126|0|statement|delete from events where id_event=1
+1718977537126|0|commit|
+1718977923393|7|statement|select * from information_schema.sequences
+1718977923415|1|statement|create index idx_event_participants on events (participants_events)
+1718977923422|2|statement|create index idx_type_name on types (type)
+1718977923425|1|statement|create index idx_user_email on users (email)
+1718977923442|0|statement|select * from "public"."types" where 1=0
+1718977923447|0|statement|select * from "public"."users" where 1=0
+1718977923459|0|statement|select * from "public"."events" where 1=0
+1718977923462|0|statement|select * from "public"."users" where 1=0
+1718977923472|0|statement|select * from "public"."users" where 1=0
+1718977924196|0|statement|select count(*) from types t1_0
+1718977924198|0|commit|
+1718977924199|0|statement|select count(*) from users u1_0
+1718977924199|0|commit|
+1718977924200|0|statement|select count(*) from events e1_0
+1718977924200|0|commit|
+1718977924201|0|statement|select count(*) from rates r1_0
+1718977924202|0|commit|

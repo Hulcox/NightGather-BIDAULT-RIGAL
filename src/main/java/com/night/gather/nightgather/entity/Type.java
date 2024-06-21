@@ -9,7 +9,7 @@ import org.hibernate.annotations.BatchSize;
 import java.util.List;
 
 @Entity
-@Table(name = "types")
+@Table(name = "types", indexes = {@Index(name = "idx_type_name", columnList = "type")})
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
