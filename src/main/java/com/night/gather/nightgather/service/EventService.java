@@ -2,8 +2,11 @@ package com.night.gather.nightgather.service;
 
 import com.night.gather.nightgather.dto.EventDto;
 import com.night.gather.nightgather.entity.Event;
+import com.night.gather.nightgather.entity.Type;
+import com.night.gather.nightgather.entity.TypeEvent;
 import com.night.gather.nightgather.mapper.EventMapper;
 import com.night.gather.nightgather.repository.EventRepository;
+import com.night.gather.nightgather.repository.TypeRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
@@ -36,6 +39,11 @@ public class EventService {
         return eventRepository.findAllOrderByDate(pageable).map(eventMapper::toDto).getContent();
     }
 
+    @Cacheable(value = "eventsByType")
+    public List<EventDto> getEventsByType(Pageable pageable, TypeEvent type ){
+        return eventRepository.findByType(pageable, type).map(eventMapper::toDto).getContent();
+    }
+
     @Cacheable(value = "event", key = "#id")
     public EventDto getEventById(Long id){
         Optional<Event> eventOptional = eventRepository.findById(id);
@@ -46,6 +54,7 @@ public class EventService {
             evict={
                     @CacheEvict(value = "events", allEntries = true),
                     @CacheEvict(value = "eventsOrderByDate", allEntries = true),
+                    @CacheEvict(value = "eventsByType", allEntries = true),
                     @CacheEvict(value = "event", allEntries = true)
             }
     )
@@ -56,7 +65,8 @@ public class EventService {
 
     @Caching(
             evict= {@CacheEvict(value = "events", allEntries = true),
-                    @CacheEvict(value = "eventsOrderByDate", allEntries = true)},
+                    @CacheEvict(value = "eventsOrderByDate", allEntries = true),
+                    @CacheEvict(value = "eventsByType", allEntries = true)},
             put = {@CachePut(value = "event", key = "#id"),
             }
     )
@@ -83,7 +93,8 @@ public class EventService {
             evict={
                     @CacheEvict(value = "events", allEntries = true),
                     @CacheEvict(value = "eventsOrderByDate", allEntries = true),
-                    @CacheEvict(value = "event", allEntries = true)
+                    @CacheEvict(value = "event", allEntries = true),
+                    @CacheEvict(value = "eventsByType", allEntries = true)
             }
     )
     public void deleteEvent(Long id) {

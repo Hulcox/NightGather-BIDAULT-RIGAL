@@ -1,6 +1,8 @@
 package com.night.gather.nightgather.controller;
 
 import com.night.gather.nightgather.dto.EventDto;
+import com.night.gather.nightgather.entity.Type;
+import com.night.gather.nightgather.entity.TypeEvent;
 import com.night.gather.nightgather.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -28,6 +30,13 @@ public class EventController {
     public ResponseEntity<List<EventDto>> getAllEventsByDate(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size);
         List<EventDto> events = eventService.getAllEventsOrderByDate(pageable);
+        return ResponseEntity.ok(events);
+    }
+
+    @GetMapping("/type/{type}")
+    public ResponseEntity<List<EventDto>> getEventsByType(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size, @PathVariable TypeEvent type) {
+        Pageable pageable = PageRequest.of(page, size);
+        List<EventDto> events = eventService.getEventsByType(pageable, type);
         return ResponseEntity.ok(events);
     }
 
