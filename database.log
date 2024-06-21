@@ -826,3 +826,67 @@
 1718966516709|0|statement|insert into participants_events (event_id,user_id) values (18,6)
 1718966516710|0|statement|insert into participants_events (event_id,user_id) values (18,8)
 1718966516710|0|commit|
+1718971072434|7|statement|select * from information_schema.sequences
+1718971072466|1|statement|alter table if exists users alter column password set data type varchar(255)
+1718971072469|2|statement|alter table if exists users add column salt varchar(255) not null
+1718971072492|0|statement|select * from "public"."types" where 1=0
+1718971072497|0|statement|select * from "public"."users" where 1=0
+1718971072510|0|statement|select * from "public"."events" where 1=0
+1718971072514|0|statement|select * from "public"."users" where 1=0
+1718971072535|0|statement|select * from "public"."users" where 1=0
+1718971073691|1|statement|select count(*) from types t1_0
+1718971073693|0|commit|
+1718971073695|0|statement|select count(*) from users u1_0
+1718971073696|0|commit|
+1718971073697|0|statement|select count(*) from events e1_0
+1718971073697|0|commit|
+1718971073699|0|statement|select count(*) from rates r1_0
+1718971073699|0|commit|
+1718971444399|18|statement|select * from information_schema.sequences
+1718971444416|2|statement|alter table if exists users add column salt varchar(255) not null
+1718971444441|0|statement|select * from "public"."types" where 1=0
+1718971444447|0|statement|select * from "public"."users" where 1=0
+1718971444462|0|statement|select * from "public"."events" where 1=0
+1718971444466|0|statement|select * from "public"."users" where 1=0
+1718971444477|0|statement|select * from "public"."users" where 1=0
+1718971445518|1|statement|select count(*) from types t1_0
+1718971445520|0|commit|
+1718971445522|0|statement|select count(*) from users u1_0
+1718971445522|0|commit|
+1718971445524|0|statement|select count(*) from events e1_0
+1718971445524|0|commit|
+1718971445525|0|statement|select count(*) from rates r1_0
+1718971445526|0|commit|
+1718971508020|2|statement|select e1_0.id_event,e1_0.address,e1_0.created_at,e1_0.datetime,e1_0.number_of_places,e1_0.organizer_id,e1_0.price,e1_0.type_id from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places order by e1_0.datetime desc offset 0 rows fetch first 10 rows only
+1718971508041|0|statement|select count(e1_0.id_event) from events e1_0 left join participants_events p1_0 on e1_0.id_event=p1_0.event_id group by e1_0.id_event having count(p1_0.user_id)<e1_0.number_of_places
+1718971508055|2|statement|select p1_0.event_id,p1_1.id_user,p1_1.address,p1_1.age,p1_1.bio,p1_1.city,p1_1.created_at,p1_1.email,p1_1.firstname,p1_1.lastname,p1_1.password,p1_1.profile_picture,p1_1.region,p1_1.salt,p1_1.username from participants_events p1_0 join users p1_1 on p1_1.id_user=p1_0.user_id where p1_0.event_id = any ('{"5","13","17","1","4","10","7","18","11","20"}')
+1718971620956|7|statement|select * from information_schema.sequences
+1718971620976|2|statement|alter table if exists users add column salt varchar(255) not null
+1718971620999|0|statement|select * from "public"."types" where 1=0
+1718971621004|0|statement|select * from "public"."users" where 1=0
+1718971621018|0|statement|select * from "public"."events" where 1=0
+1718971621022|0|statement|select * from "public"."users" where 1=0
+1718971621032|0|statement|select * from "public"."users" where 1=0
+1718971622162|1|statement|select count(*) from types t1_0
+1718971622164|0|commit|
+1718971622165|0|statement|select count(*) from users u1_0
+1718971622166|0|commit|
+1718971622167|0|statement|select count(*) from events e1_0
+1718971622167|0|commit|
+1718971622169|0|statement|select count(*) from rates r1_0
+1718971622169|0|commit|
+1718971850195|5|statement|select * from information_schema.sequences
+1718971850212|2|statement|alter table if exists users add column salt varchar(255) not null
+1718971850235|0|statement|select * from "public"."types" where 1=0
+1718971850241|0|statement|select * from "public"."users" where 1=0
+1718971850258|0|statement|select * from "public"."events" where 1=0
+1718971850262|0|statement|select * from "public"."users" where 1=0
+1718971850274|0|statement|select * from "public"."users" where 1=0
+1718971851410|1|statement|select count(*) from types t1_0
+1718971851412|0|commit|
+1718971851414|0|statement|select count(*) from users u1_0
+1718971851414|0|commit|
+1718971851416|0|statement|select count(*) from events e1_0
+1718971851416|0|commit|
+1718971851417|0|statement|select count(*) from rates r1_0
+1718971851418|0|commit|
