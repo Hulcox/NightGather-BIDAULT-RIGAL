@@ -37,18 +37,35 @@ public class UserService {
     }
 
     public Map<String, Object> signIn(UserDto userDto) {
-        try {
-            User userSaved = userRepository.findByEmail(userDto.getEmail()).orElse(null);
-            byte[] salt = Password.fromHex(userSaved.getSalt());
-            String hashUserSupplied = Password.createHash(userDto.getPassword().toCharArray(), salt);
-            if (hashUserSupplied.equals(userSaved.getPassword())) {
-                String jwt = AuthenticationWithJwt.create(userSaved);
-                return Map.of("token", jwt);
-            }
-        } catch (Exception e) {
-            log.error(e.getMessage());
+        User userSaved = getUserByEmail(userDto);
+        byte[] salt = Password.fromHex(userSaved.getSalt());
+        String hashUserSupplied = Password.createHash(userDto.getPassword().toCharArray(), salt);
+        if (hashUserSupplied.equals(userSaved.getPassword())) {
+            String jwt = AuthenticationWithJwt.create(userSaved);
+            return Map.of("token", jwt);
         }
+
         log.error("🔴 Mot de passe invalide");
         return null;
+    }
+
+    public Map<String, Object> signUp(UserDto userDto) {
+        User userSaved = getUserByEmail(userDto);
+        if (userSaved != null) {
+            log.error("🔴 L'utilisateur existe déjà");
+            return null;
+        }
+        User user = userMapper.toEntity(userDto);
+        byte[] salt = Password.createSalt();
+        String hash = Password.createHash(userDto.getPassword().toCharArray(), salt);
+        user.setSalt(Password.toHex(salt));
+        user.setPassword(hash);
+        userRepository.save(user);
+        String jwt = AuthenticationWithJwt.create(user);
+        return Map.of("token", jwt);
+    }
+
+    public User getUserByEmail(UserDto userDto) {
+        return userRepository.findByEmail(userDto.getEmail()).orElse(null);
     }
 }
