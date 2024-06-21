@@ -42,7 +42,7 @@ public class User extends BaseEntity {
     @Column(name = "bio")
     private String bio;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
     @BatchSize(size = 10)
     private List<Rate> rates;
 
@@ -56,7 +56,7 @@ public class User extends BaseEntity {
     @Column(name = "address",nullable = false, length = 100)
     private String address;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY,  cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
     @JoinTable(
             name = "participants_events",
             joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id_user"),
@@ -65,7 +65,7 @@ public class User extends BaseEntity {
     @BatchSize(size = 10)
     private List<Event> events;
 
-    @OneToMany(mappedBy = "organizer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "organizer", fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
     @BatchSize(size = 10)
     private List<Event> organizedEvents;
 }

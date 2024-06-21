@@ -27,7 +27,7 @@ public class Event extends BaseEntity {
     @Column(name="address", nullable = false, length = 150)
     private String address;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH})
     @JoinTable(
             name = "participants_events",
             joinColumns = @JoinColumn(name = "event_id", referencedColumnName = "id_event"),
