@@ -7,7 +7,7 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring", uses = EventMapper.class)
+@Mapper(componentModel = "spring")
 public interface TypeMapper {
     TypeDto toDto(Type type);
     Type toEntity(TypeDto typeDto);

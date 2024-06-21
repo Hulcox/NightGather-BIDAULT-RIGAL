@@ -13,7 +13,7 @@ public class Rate {
     @Column(name = "id_rate")
     private Long id;
 
-    @ManyToOne()
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", referencedColumnName = "id_user")
     private User user;
 

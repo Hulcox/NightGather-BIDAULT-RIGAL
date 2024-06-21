@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 public class RateDto {
 
     private Long id;
-    private UserDto user;
+//    private UserDto user;
     private int rating;
     private String comment;
 }

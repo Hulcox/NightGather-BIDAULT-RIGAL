@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class UserDto {
 
     private Long id;
@@ -19,12 +19,10 @@ public class UserDto {
     private String username;
     private int age;
     private String bio;
-//    private List<RateDto> rates;
+    private List<RateDto> rates;
     private String profilePicture;
     private String region;
     private String address;
     private String city;
-//    private List<EventDto> events;
-//    private List<EventDto> organizedEvents;
 }
 

@@ -36,6 +36,10 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+//        eventRepository.deleteAll();
+//        typeRepository.deleteAll();
+//        rateRepository.deleteAll();
+//        userRepository.deleteAll();
         try {
             if (typeRepository.count() + userRepository.count() + eventRepository.count() + rateRepository.count() == 0) {
                 List<Type> types = initDataType();

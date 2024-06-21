@@ -35,7 +35,7 @@ public class User {
     private String bio;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    List<Rate> rates;
+    private List<Rate> rates;
 
     @Column(name = "profile_picture")
     private String profilePicture;
@@ -56,5 +56,5 @@ public class User {
     private List<Event> events;
 
     @OneToMany(mappedBy = "organizer", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    List<Event> organizedEvents;
+    private List<Event> organizedEvents;
 }
