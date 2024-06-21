@@ -23,7 +23,7 @@ public class UserController {
     private UserService userService;
 
     @GetMapping
-    public ResponseEntity<List<UserDto>> getAllUsers(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "50") int size, @RequestHeader("Authentication") final Optional<String> token) {
+    public ResponseEntity<List<UserDto>> getAllUsers(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "50") int size, @RequestHeader("Authorization") final Optional<String> token) {
         if (token.isPresent() && verifyJwt(token.get()) != null) {
             Pageable pageable = PageRequest.of(page, size);
             return ResponseEntity.ok(userService.getAllUsers(pageable));
